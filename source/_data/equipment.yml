@@ -1,0 +1,33 @@
+- 
+  description: 个人使用装备
+  top_background: https://img02.anheyu.com/adminuploads/1/2023/07/01/649fd358745a1.webp
+  good_things:
+    - title: 日用
+      description: 提升自己生产效率的硬件设备
+      equipment_list:
+        - name: 真我 GT Neo6 SE
+          specification: 流银骑士 / 256G
+          description: 性价比这一块
+          image: https://r1.realme.net/general/20240409/171265678236005ad24019fea46ab82b35341e2446e40.png?width=1440&height=1440&size=601326&x-oss-process=image/format,webp
+          link: https://www.realme.com/cn/realme-gt-neo-6-se
+       
+    - title: 出行
+      description: 用来出行的实物及设备
+      equipment_list:
+        - name: iQOO Watch GT
+          specification: 黑色
+          description: 价格划算，互联方便，缺点就是屏幕刷新率高
+          image: https://wwwstatic.vivo.com.cn/vivoportal/files/image/detail/20240701/223fdc15a52b053998fc891b37f3e8c5.png
+          link: https://www.vivo.com.cn/vivo/iqoowatchgt
+
+        - name: Xiaomi Smart Band 9
+          specification: 黑色
+          description: 
+          image: https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1750932881.88766366.png
+          link: https://www.mi.com/prod/xiaomi-shouhuan-9
+
+        - name: 真我45W自带线移动电源
+          specification: 白色
+          description: 充电迅速适配手机
+          image: https://r1.realme.net/general/20251202/1764669406127608662d97d414f7982a64097770e06df.png?width=1080&height=1080&size=150627&x-oss-process=image/format,webp
+          link: https://buy.realme.com/cn/goods/687

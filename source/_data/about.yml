@@ -1,0 +1,107 @@
+- class_name: 关于页
+  subtitle: 生活明朗，万物可爱✨
+  avatarImg: img/avatar.png
+  avatarSkills:
+    left:
+      - 🤖️ 数码科技爱好者
+      - 🔍 分享与热心帮助
+    right:
+      - 专修交互与设计 🤝
+      - 壮汉人狠话不多 💢
+  name: 流然
+  description: 是一名 学生、独立开发者
+  aboutsiteTips:
+    tips: 追求
+    title1: 源于
+    title2: 热爱而去 感受
+    word:
+      - 学习
+      - 生活
+      - 程序
+      - 体验
+  helloAbout: Hello    there! 
+  skillsTips:
+    tips: 技能
+    title: 开启创造力
+  careers:
+    tips: 生涯
+    title: 无限进步
+    list:
+      - desc: 苦逼高中生
+        color: "#357ef5"
+
+    img: https://img02.anheyu.com/adminuploads/1/2022/09/26/6330e9bcc39cc.png
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://img02.anheyu.com/adminuploads/1/2022/09/23/632d634f8376d.jpg
+  map:
+    title: 我现在住在
+    StrengthenTitle: 中国，郑州市
+    background: /img/map/map_light.jpg
+    backgroundDark: /img/map/map_dark.jpg
+  selfInfo:
+    selfInfoTips1: 生于
+    selfInfoContentYear: 2010
+    selfInfoTips2: 郑州一中
+    selfInfoContent2: 高中
+    selfInfoTips3: 现在职业
+    selfInfoContent3: 高二学生👨‍🎓
+  personalities:
+    author_name: 活动家
+    personality_type: ENFP-T
+    photo_url: https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Vanilla-PMP_Carousel-Card_SGD-26_1280x720.jpg
+    personality_img: https://www.16personalities.com/static/images/personality-types/avatars/email/large/ENFP_male.png
+    name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
+  maxim:
+    maxim_tips: 座右铭
+    maxim_top: 天行有常，
+    maxim_bottom: 人心无住。
+  buff:
+    buff_tips: 特长
+    buff_top: 脑回路新奇的 sz
+    buff_bottom: 猎奇指数 MAX
+  game:
+    game_tips: 爱好游戏
+    game_title: Minecraft
+    game_uid: "UID: Liuran2024"
+    game_bg: "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/EXPLORE_PDPScreenshotRefresh2024_multipleBiomes_01.png"
+  comic:
+    comic_tips: 爱好小说
+    comic_title: 追书
+    comic_list:
+      - name: 遮天
+        href: https://www.qidian.com/book/1735921/
+        cover: https://bookcover.yuewen.com/qdbimg/349573/1735921/600.webp
+      - name: 雪中悍刀行
+        href: https://www.zongheng.com/detail/189169?tabsName=catalogue
+        cover: https://static.zongheng.com/upload/cover/8c/75/8c75ecea9f7dc46658af000726406ce0.jpeg
+      - name: 将夜
+        href: https://www.qidian.com/book/2083259/
+        cover: https://bookcover.yuewen.com/qdbimg/349573/2083259/600.webp
+      - name: 神秘复苏
+        href: https://www.qidian.com/bqd/clhvbpos/
+        cover: https://bookcover.yuewen.com/qdbimg/349573/1012584111/180.webp
+      - name: 庆余年
+        href: "https://www.qidian.com/bqd/clnjsktuos/"
+        cover: "https://bookcover.yuewen.com/qdbimg/349573/114559/180.webp"
+
+  like:
+    like_tips: 关注偏好
+    like_title: 数码科技
+    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
+    like_bottom: 手机、电脑软硬件
+  music:
+    music_tips: 其余爱好
+    music_title: 唱、跳、rap、篮球，music
+    music_bg: https://ts1.tc.mm.bing.net/th/id/R-C.891881ca357bfdb6ce7830f5e2222713?rik=kP%2f7e58ECQFWig&riu=http%3a%2f%2fi0.hdslb.com%2fbfs%2farchive%2f582e5586b7f2a06b2cf8de50e855250cfdfb8c9b.jpg&ehk=3bvQK80g%2bs5f1q0hCqYWlmdlYdQUwa4B8%2bKTjmFv3%2bs%3d&risl=&pid=ImgRaw&r=0
+    music_link: /music
+  reward_list:
+    - name: zsmk
+      amount: 114514
+      datatime: 9178-12-13
+      suffix: ￥
+    - name: 孙笑川
+      amount: 917813.114514
+      datatime: 9178-12-13
+      suffix: ￥

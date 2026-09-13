@@ -1,0 +1,11 @@
+- title: 即刻短文
+  subTitle: 咸鱼的日常生活。
+  tips: 随时随地，分享生活
+  buttonText: 关于我
+  buttonLink: /about/
+  limit: 30
+  home_essay: true
+  top_background: https://img.liuranblog.top/file/1789224950044_1.jpg
+  essay_list:
+    - content: 写cpu的代码写破防了
+      date: 2026/09/12
