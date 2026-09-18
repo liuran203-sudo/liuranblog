@@ -4,8 +4,8 @@ tags:
   - Hexo
   - 博客
 categories:
-  - Hexo相关
-cover: 'https://img.liuranblog.top/file/1789225567040_hexo_dj.png'
+  - Hexo
+cover: 'https://img.liuranblog.top/file/1789736847371_post_1.png'
 abbrlink: 6b218ca2
 date: 2026-09-12 14:52:51
 ---
