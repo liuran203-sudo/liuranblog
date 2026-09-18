@@ -1,0 +1,195 @@
+block content
+  .page.zbook-page
+    .zbook-top
+      if page.quote
+        .zbook-quote-box
+          p.page-quote= page.quote
+    //题材筛选（新增【历史】一级分类）
+    .tag-cloud.tag-genre
+      .zbook-tag.active(data-genre="all") 全部题材
+      .zbook-tag(data-genre="玄幻") 玄幻
+      .zbook-tag(data-genre="都市") 都市
+      .zbook-tag(data-genre="武侠") 武侠
+      .zbook-tag(data-genre="科幻") 科幻
+      .zbook-tag(data-genre="灵异") 灵异
+      .zbook-tag(data-genre="仙侠") 仙侠
+      .zbook-tag(data-genre="历史") 历史
+      .zbook-tag(data-genre="悬疑") 悬疑
+    if site.data.zbook
+      .zbook-container
+        .anzhiyu-gallery
+          // ========== 这里修改！！单层循环，不要group不要book_list ==========
+          each book in site.data.zbook
+            .gallery-list-item(data-genre=book.genre)
+              .gallery-item-card
+                a(href=book.href target="_blank")
+                  .gallery-item-cover
+                    img(src=book.cover alt=book.name loading="lazy")
+                  .gallery-item-info
+                    h3.gallery-item-name= book.name
+                    if book.author && book.author != ""
+                      div.gallery-item-author 作者：#{book.author}
+                    .gallery-item-tags
+                      span.tag-status= book.genre
+                      if book.subgenre && book.subgenre != ""
+                        span.tag-subgenre= book.subgenre
+                      if book.status && book.status != ""
+                        span.tag-bookstatus= book.status
+                    p.gallery-item-desc= book.desc
+    else
+      p 暂无书籍数据，请在 _data/zbook.yml 添加内容
+
+block style
+  style.
+    .zbook-page{padding:10px 0}
+    .zbook-top{
+      margin-bottom:24px;
+    }
+    .zbook-quote-box{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:8px;
+      background:var(--anzhiyu-card-bg);
+      color:var(--anzhiyu-secondcolor);
+      font-size:16px;
+      line-height:1.6;
+    }
+    .zbook-quote-box .page-quote{
+      margin:0;
+      color:inherit;
+    }
+    .zbook-page .tag-cloud{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin:16px 0;
+      justify-content:flex-start;
+    }
+    .zbook-page .zbook-tag{
+      padding:5px 14px;
+      border-radius:8px;
+      cursor:pointer;
+      background:var(--anzhiyu-card-bg);
+      color:var(--anzhiyu-fontcolor);
+      transition:0.3s;
+      width:auto;
+    }
+    .zbook-page .zbook-tag.active{
+      background:var(--anzhiyu-main);
+      color:#fff;
+    }
+    .gallery-list-item.hidden{display:none}
+    .anzhiyu-gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+      gap:20px;
+    }
+    .gallery-item-card{
+      background:var(--anzhiyu-card-bg);
+      border-radius:12px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+    .gallery-item-card:hover{transform:translateY(-5px)}
+    .gallery-item-cover{
+      width:100%;
+      aspect-ratio:3 / 4;
+      overflow:hidden;
+    }
+    .gallery-item-cover img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+    .gallery-item-info{padding:12px}
+    .gallery-item-name{
+      margin:0 0 4px;
+      font-size:16px;
+      color:var(--anzhiyu-fontcolor);
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+    /*作者样式*/
+    .gallery-item-author{
+      font-size:13px;
+      color:var(--anzhiyu-secondcolor);
+      margin-bottom:6px;
+    }
+    .gallery-item-tags{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      margin-bottom:8px;
+    }
+    .gallery-item-tags span{
+      font-size:12px;
+      padding:2px 7px;
+      border-radius:6px;
+    }
+    .tag-status{
+      background:var(--anzhiyu-main);
+      color:#fff;
+    }
+    .tag-subgenre{
+      background:var(--anzhiyu-secondbg);
+      color:var(--anzhiyu-secondcolor);
+    }
+    .tag-bookstatus.serial{
+      background:#36c66c;
+      color:#fff;
+    }
+    .tag-bookstatus.finish{
+      background:#888888;
+      color:#fff;
+    }
+    .gallery-item-desc{
+      margin:0;
+      font-size:12px;
+      color:var(--anzhiyu-secondcolor);
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      overflow:hidden;
+    }
+
+block script
+  script.
+    let selectGenre = "all";
+    const genreTabs = document.querySelectorAll('.tag-genre .zbook-tag');
+    const items = document.querySelectorAll('.gallery-list-item');
+
+    function applyStatusTagStyle(){
+      document.querySelectorAll('.tag-bookstatus').forEach(el=>{
+        const txt = el.textContent.trim();
+        if(txt === "连载中"){
+          el.classList.add("serial");
+        }else if(txt === "已完结"){
+          el.classList.add("finish");
+        }
+      })
+    }
+
+    function filterRender(){
+      items.forEach(item=>{
+        const itemGenre = item.dataset.genre;
+        if(selectGenre !== "all" && itemGenre !== selectGenre){
+          item.classList.add('hidden');
+        }else{
+          item.classList.remove('hidden');
+        }
+      })
+    }
+
+    genreTabs.forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        genreTabs.forEach(t=>t.classList.remove('active'));
+        tab.classList.add('active');
+        selectGenre = tab.dataset.genre;
+        filterRender();
+      })
+    })
+
+    applyStatusTagStyle();
+    filterRender();

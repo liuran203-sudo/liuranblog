@@ -1,0 +1,42 @@
+block content
+  .page.update-page
+    .page-title
+      h1 站点更新日志
+      p 记录博客每一次改动、新增功能与bug修复
+
+    .update-container
+      if site.data.update
+        each item in site.data.update
+          .update-item
+            .update-date #{item.date}
+            .update-title #{item.title}
+            ul.update-log-list
+              each msg in item.log
+                li= msg
+
+style.
+  .update-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .update-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--anzhiyu-card-border);
+  }
+  .update-date {
+    font-size: 14px;
+    color: var(--anzhiyu-fontcolor-2);
+  }
+  .update-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0.4rem 0 0.8rem;
+  }
+  .update-log-list {
+    padding-left: 1.2rem;
+  }
+  .update-log-list li {
+    line-height: 1.8;
+    margin: 0.3rem 0;
+  }

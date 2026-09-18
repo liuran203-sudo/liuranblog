@@ -1,0 +1,62 @@
+block content
+  .page.cpu-index-page
+    .page-title
+      h1 CPU资料库
+      p 整理手机与桌面处理器参数信息
+
+    .cpu-home-container
+      .cpu-card-wrap
+        a.cpu-home-card(href="/mobilecpu/")
+          .card-icon
+            i.fa-solid-fa-mobile
+          h3 手机处理器
+          p 移动端SoC，手机芯片参数、制程、跑分、发布时间
+        a.cpu-home-card(href="/computercpu/")
+          .card-icon
+            i.fa-regular-fa-desktop
+          h3 电脑处理器
+          p 桌面端CPU，Intel / AMD 处理器规格汇总
+
+style.
+  .cpu-home-container {
+    max-width:860px;
+    margin:3rem auto;
+    padding:0 1rem;
+  }
+  .cpu-card-wrap {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1.5rem;
+  }
+  .cpu-home-card {
+    display:block;
+    background:var(--anzhiyu-card-bg);
+    border-radius:12px;
+    padding:2rem;
+    text-align:center;
+    border:1px solid var(--anzhiyu-card-border);
+    transition: 0.3s;
+  }
+  .cpu-home-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--anzhiyu-shadow);
+  }
+  .cpu-home-card .card-icon {
+    font-size:2.4rem;
+    color:var(--anzhiyu-main);
+    margin-bottom:1rem;
+  }
+  .cpu-home-card h3 {
+    font-size:1.25rem;
+    margin-bottom:0.6rem;
+  }
+  .cpu-home-card p {
+    color:var(--anzhiyu-fontcolor-2);
+    font-size:0.92rem;
+    line-height:1.6;
+  }
+  @media(max-width:640px){
+    .cpu-card-wrap{
+      grid-template-columns:1fr;
+    }
+  }
