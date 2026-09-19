@@ -1,42 +1,164 @@
 block content
-  .page.update-page
-    .page-title
-      h1 站点更新日志
-      p 记录博客每一次改动、新增功能与bug修复
+  #page
+    .update-page
+      .update-header
+        h1 站点更新日志
+        p 记录博客每一次改动、新增功能与 bug 修复
 
-    .update-container
-      if site.data.update
-        each item in site.data.update
-          .update-item
-            .update-date #{item.date}
-            .update-title #{item.title}
-            ul.update-log-list
-              each msg in item.log
-                li= msg
+      .update-timeline
+        if site.data.update
+          each item, idx in site.data.update
+            .timeline-item(class=idx === 0 ? 'is-latest' : '')
+              .timeline-dot
+              .timeline-content
+                .timeline-date= item.date
+                h3.timeline-title= item.title
+                ul.timeline-log
+                  each msg in item.log
+                    li= msg
+        else
+          p 暂无更新日志，请在 _data/update.yml 添加内容
 
-style.
-  .update-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  .update-item {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--anzhiyu-card-border);
-  }
-  .update-date {
-    font-size: 14px;
-    color: var(--anzhiyu-fontcolor-2);
-  }
-  .update-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0.4rem 0 0.8rem;
-  }
-  .update-log-list {
-    padding-left: 1.2rem;
-  }
-  .update-log-list li {
-    line-height: 1.8;
-    margin: 0.3rem 0;
-  }
+block style
+  style.
+    .update-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .update-header {
+      margin-bottom: 40px;
+    }
+    .update-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--anzhiyu-card-border);
+    }
+    .update-header p {
+      margin: 12px 0 0;
+      font-size: 15px;
+      color: var(--anzhiyu-secondcolor);
+    }
+    /* 时间轴容器 */
+    .update-timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+    /* 左侧竖线 */
+    .update-timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--anzhiyu-card-border);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 32px;
+    }
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+    /* 时间轴圆点 */
+    .timeline-dot {
+      position: absolute;
+      left: -32px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--anzhiyu-card-bg);
+      border: 3px solid var(--anzhiyu-card-border);
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+    /* 最新一条高亮 */
+    .timeline-item.is-latest .timeline-dot {
+      border-color: var(--anzhiyu-main);
+      background: var(--anzhiyu-main);
+      box-shadow: 0 0 0 4px rgba(66, 90, 239, 0.15);
+    }
+    /* 卡片 */
+    .timeline-content {
+      background: var(--anzhiyu-card-bg);
+      border-radius: 12px;
+      padding: 18px 22px;
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+    .timeline-content:hover {
+      transform: translateX(4px);
+      border-color: var(--anzhiyu-main);
+    }
+    .timeline-date {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--anzhiyu-main);
+      background: rgba(66, 90, 239, 0.1);
+      padding: 2px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .timeline-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0 0 10px;
+    }
+    .timeline-log {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+    .timeline-log li {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--anzhiyu-secondcolor);
+      margin: 4px 0;
+    }
+    .timeline-log li::marker {
+      color: var(--anzhiyu-main);
+    }
+    /* 隐藏侧边栏、评论、目录 */
+    #aside-content,
+    #post-comment,
+    .post-comment,
+    #card-toc,
+    #toc,
+    .toc,
+    .post-toc,
+    .article-toc,
+    .toc-container {
+      display: none !important;
+    }
+    .main {
+      width: 100% !important;
+    }
+    @media (max-width: 768px) {
+      .update-page {
+        padding: 24px 16px 60px;
+      }
+      .update-header h1 {
+        font-size: 1.5rem;
+      }
+      .update-timeline {
+        padding-left: 26px;
+      }
+      .timeline-dot {
+        left: -26px;
+        width: 12px;
+        height: 12px;
+      }
+      .timeline-content {
+        padding: 14px 16px;
+      }
+    }
+
+block script
+  script.
+    // 更新日志页面无需额外脚本

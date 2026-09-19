@@ -1,0 +1,76 @@
+block content
+  #page
+    .copyright-page
+      .copyright-header
+        h1= page.title
+        if site.data.copyright.updated
+          p.copyright-updated 版权协议最新更新时间：#{site.data.copyright.updated}
+      #article-container.copyright-content
+        if site.data.copyright.sections
+          each sec in site.data.copyright.sections
+            h2= sec.title
+            if sec.paragraphs
+              each p in sec.paragraphs
+                p!= markdown(p)
+            if sec.list
+              ul
+                each item in sec.list
+                  li!= markdown(item)
+            if sec.subsections
+              each sub in sec.subsections
+                h3= sub.title
+                if sub.paragraphs
+                  each p in sub.paragraphs
+                    p!= markdown(p)
+        else
+          p 暂无版权协议内容，请在 _data/copyright.yml 添加内容
+
+block style
+  style.
+    .copyright-page {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .copyright-header {
+      margin-bottom: 24px;
+    }
+    .copyright-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--anzhiyu-card-border);
+    }
+    .copyright-updated {
+      margin: 12px 0 0;
+      font-size: 14px;
+      color: var(--anzhiyu-secondcolor);
+    }
+    #aside-content,
+    #post-comment,
+    .post-comment,
+    #card-toc,
+    #toc,
+    .toc,
+    .post-toc,
+    .article-toc,
+    .toc-container {
+      display: none !important;
+    }
+    .main {
+      width: 100% !important;
+    }
+    @media (max-width: 768px) {
+      .copyright-page {
+        padding: 24px 16px 60px;
+      }
+      .copyright-header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+block script
+  script.
+    // 版权页面无需额外脚本

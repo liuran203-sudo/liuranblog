@@ -1,0 +1,81 @@
+block content
+  #page
+    .cookies-page
+      .cookies-header
+        h1= page.title
+        if site.data.cookies.updated
+          p.cookies-updated 本政策的最近更新日期为：#{site.data.cookies.updated}
+      #article-container.cookies-content
+        if site.data.cookies.sections
+          each sec in site.data.cookies.sections
+            h2= sec.title
+            if sec.paragraphs
+              each p in sec.paragraphs
+                p!= markdown(p)
+            if sec.list
+              ul
+                each item in sec.list
+                  li!= markdown(item)
+            if sec.table
+              table
+                thead
+                  tr
+                    each th in sec.table.headers
+                      th= th
+                tbody
+                  each row in sec.table.rows
+                    tr
+                      each cell in row
+                        td!= markdown(cell)
+        else
+          p 暂无 Cookies 内容，请在 _data/cookies.yml 添加内容
+
+block style
+  style.
+    .cookies-page {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .cookies-header {
+      margin-bottom: 24px;
+    }
+    .cookies-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--anzhiyu-card-border);
+    }
+    .cookies-updated {
+      margin: 12px 0 0;
+      font-size: 14px;
+      color: var(--anzhiyu-secondcolor);
+    }
+    #aside-content,
+    #post-comment,
+    .post-comment,
+    #card-toc,
+    #toc,
+    .toc,
+    .post-toc,
+    .article-toc,
+    .toc-container {
+      display: none !important;
+    }
+    .main {
+      width: 100% !important;
+    }
+    @media (max-width: 768px) {
+      .cookies-page {
+        padding: 24px 16px 60px;
+      }
+      .cookies-header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+block script
+  script.
+    // Cookies 页面无需额外脚本
