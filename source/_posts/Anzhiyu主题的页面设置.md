@@ -6,7 +6,7 @@ tags:
   - 博客
 categories:
   - Hexo
-cover: 'https://img.liuranblog.top/file/1790255077874_post_3.png'
+cover: 'https://img.liuranblog.top/file/1790269367957_post_3.png'
 abbrlink: '75815004'
 date: 2026-09-22 00:17:50
 ---
@@ -293,30 +293,571 @@ menu:
     关于本人: /about/ || icon-zhifeiji
 
 ```
-| 参数 | 备选值/类型 | 是否必填 | 说明 |
-|-----|-----|-----|-----|
-| class_name | 关于页 | 必填 | 页面类 |
-| subtitle | string | 必填 | 副标题 |
-| avatarImg | url | 必填 | 头像链接 |
-| name | string | 必填 | 作者名称 |
-| description | string | 必填 | 描述 |
-| aboutsiteTips | object | 必填 | 站点关于提示相关配置 |
-| aboutsiteTips.tips | 	string | 必填 | 站点关于提示性文字 |
-| aboutsiteTips.title1 | string | 必填 | 站点关于标题文字 1 |
-| aboutsiteTips.title2 | string | 必填 | 站点关于标题文字 2 |
-| aboutsiteTips.word | list | 必填 | 站点关于标题滚动文字 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
-| class_name | 关于页 | 必填 | 页面类 |
+样式如图所示：
+![alt text](https://img02.anheyu.com/adminuploads/1/2023/04/09/6432643720ef6.png!blogimg)
+
+### 2.3.我的装备页面
+前往你的 Hexo 博客的根目录 在 Hexo 博客根目录 [blog] 下打开终端，输入
+```bash
+hexo new page equipment
+```
+你会找到 source/equipment/index.md 这个文件
+修改这个文件： 记得添加 type: "equipment"
+```markdown
+title: 我的装备
+date: 2023-06-10 21:33:24
+type: equipment
+aside: false
+top_img: false
+```
+添加数据，新建文件source\_data\equipment.yml,没有_data文件夹的话也请自己新建。以下是默认格式示例，打开source\_data\equipment.yml，输入
+```yml
+- class_name: 好物
+  description: 实物装备推荐
+  tip: 跟 安知鱼 一起享受科技带来的乐趣
+  top_background: https://bu.dusays.com/2023/07/05/64a4c38842b7a.webp
+  good_things:
+    - title: 生产力
+      description: 提升自己生产效率的硬件设备
+      equipment_list:
+        - name: MacBook Pro 2021 16 英寸
+          specification: M1 Max 64G / 1TB
+          description: 屏幕显示效果好、色彩准确、对比度强、性能强劲、续航优秀。可以用来开发和设计。
+          image: https://bu.dusays.com/2023/07/05/64a4c3b191e2e.png
+          link: /posts/571d.html
+        - name: iPad 2020
+          specification: 深空灰 / 128G
+          description: 事事玩得转，买前生产力，买后爱奇艺。
+          image: https://bu.dusays.com/2023/07/05/64a4c3b191e2e.png
+          link: https://www.apple.com.cn/ipad-10.2/
+        - name: iPhone 12 mini
+          specification: 绿色 / 128G
+          description: 超瓷晶面板，玻璃背板搭配铝金属边框，曲线优美的圆角设计，mini大小正好一只手就抓住，深得我心，唯一缺点大概就是续航不够。
+          image: https://bu.dusays.com/2023/07/05/64a4c3ded6319.webp
+          link: https://www.apple.com.cn/iphone-12/specs/
+        - name: AirPods（第三代）
+          specification: 标准版
+          description: 第三代对比第二代提升很大，和我一样不喜欢入耳式耳机的可以入，空间音频等功能确实新颖，第一次使用有被惊艳到。
+          image: https://bu.dusays.com/2023/07/05/64a4c3ded6319.webp
+          link: https://www.apple.com.cn/airpods-3rd-generation/
+    - title: 出行
+      description: 用来出行的实物及设备
+      equipment_list:
+        - name: Apple Watch Series 8
+          specification: 黑色
+          description: 始终为我的健康放哨，深夜弹出站立提醒，不过确实有效的提高了我的运动频率，配合apple全家桶还是非常棒的产品，缺点依然是续航。
+          image: https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp
+          link: https://www.apple.com.cn/apple-watch-series-8/
+        - name: NATIONAL GEOGRAPHIC双肩包
+          specification: 黑色
+          description: 国家地理黑色大包，正好装下16寸 Macbook Pro，并且背起来很舒适，底部自带防雨罩也好用，各种奇怪的小口袋深得我心。
+          image: https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp
+          link: https://item.jd.com/100011269828.html
+        - name: NATIONAL GEOGRAPHIC学生书包🎒
+          specification: 红白色
+          description: 国家地理黑色大包，冰冰🧊同款，颜值在线且实用。
+          image: https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp
+          link: https://item.jd.com/100005889786.html
+```
+
+主题配置文件中开启menu中关于和我的装备的注释，导航栏我的装备，注意缩进！！！
+```yml
+  关于:
+    我的装备: /equipment/ || anzhiyu-icon-dice-d20
+
+```
+
+### 2.4.留言板页面
+在博客根目录执行
+```bash
+npm install hexo-butterfly-envelope --save
+```
+在站点配置文件_config.yml中添加以下内容配置，更多配置请查看信笺样式留言板
+
+```yml
+#envelope_comment
+#seehttps://akilar.top/posts/e2d3c450/
+envelope_comment:
+  enable: true #控制开关
+  custom_pic:
+    cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
+    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png #信笺底部图片
+    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png # 信封前半部分
+    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png # 信封后半部分
+  message: #信笺正文，多行文本，写法如下
+    - 有什么想问的？
+    - 有什么想说的？
+    - 有什么想吐槽的？
+    - 哪怕是有什么想吃的，都可以告诉我哦~
+  bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
+  height: #1024px，信封划出的高度
+  path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
+  front_matter: #【可选】comments页面的 front_matter 配置
+    title: 留言板
+    comments: true
+    top_img: false
+    type: envelope
+```
+### 2.5.首页即刻说说页面
+在 Hexo 博客根目录 [blog]下打开终端，输入
+```bash
+hexo new page essay
+```
+你会找到 source/essay/index.md 这个文件
+修改这个文件： 记得添加 type: "essay"
+```markdown
+---
+title: 即刻短文
+date: 2020-07-22 22:06:17
+comments: true
+aside: false
+top_img: false
+type: essay
+---
+```
+新建source/_data/essay.yml，输入以下内容，具体字段不做解释，可以依葫芦画瓢。
+```yml
+- title: 即刻短文
+  subTitle: 咸鱼的日常生活。
+  tips: 随时随地，分享生活
+  buttonText: 关于我
+  buttonLink: /about/
+  limit: 30
+  home_essay: true
+  top_background: https://img02.anheyu.com/adminuploads/1/2022/08/21/630249e2df20f.jpg
+  essay_list:
+    - content: 安知鱼主题指南
+      date: 2023/09/09
+      video:
+        - https://player.bilibili.com/player.html?aid=226886152&bvid=BV1Ch41137tR&cid=1081639816&p=1&autoplay=0
+    - content: 支持了Accesskey快捷键，可以直接按下shift + ?组合键以查看快捷键选项。
+      date: 2023/07/01
+      video:
+        - https://cdn.jsdelivr.net/npm/anzhiyu-blog-static@1.0.0/video/%E9%A3%8E%E8%BD%A6%E6%A0%B7%E5%BC%8F%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88.mp4
+      image:
+        - https://img02.anheyu.com/adminuploads/1/2023/07/01/64a033cb2c21e.webp!blogimg
+      address: 长沙
+      from: 安知鱼
+      link: /posts/e140.html
+    - content: 音乐支持了参数设置自定义歌单
+      date: 2023/01/02
+      link: https://hexo.anheyu.com/music/?id=7269231710&server=tencent
+    - content: 关于页的打赏仿了b站的充电功能，使用svg绘图➕一些动画参数移动，应该不会被b站警告吧😜，另外文章也支持了顶部随机b站同款春秋冬banner。
+      date: 2022/12/18
+    - content: React中不能直接修改state的一个重要原因是在性能优化时的prueComponment会进行浅层比较会认为是用一个对象且不能进入队列中批量更新
+      date: 2022/12/10
+    - content: 好耶，马上就可以放假回家了！好想家里的好吃的😋！才不是想捏妹妹的脸了
+      date: 2022/12/06
+    - content: 全局音乐的动画也处理好了, nice!
+      date: 2022/11/13
+    - content: 把页脚, 首页顶部全都魔改到本地了, 方便后续魔改, 音乐也改成胶囊的样式了, 其实还是想让胶囊可拖拽, 不可点击改变歌词位置的, 但是弄了半天都没弄好就放弃了
+      date: 2022/11/13
+    - content: 朋友圈船新版本终于写完了, 耶✌️
+      date: 2022/11/05
+      link: https://hexo.anheyu.com/album/
+    - content: 终于把相册集搞定了, 耶✌️, 瀑布流在滑动滚动条一个视口范围上下100的情况执行一次, 到底部停止监听让性能高了好多，再也不会布局混乱🤪了
+      date: 2022/10/25
+      link: https://hexo.anheyu.com/album/
+    - content: 搜索🔍支持缩略图显示啦（默认获取文章内容的第一张图片）
+      date: 2022/10/23 08:00:00
+      from: 安知鱼
+    - content: 遇见彩虹🌈吃定彩虹
+      date: 2022/10/23 10:00:00
+      image:
+        - https://bu.dusays.com/2023/04/09/64329399e285d.webp
+        - https://bu.dusays.com/2023/04/09/64329399aa3bc.webp
+        - https://bu.dusays.com/2023/04/09/6432939996dd7.webp
+    - content: ThreeJs API真多丫
+      date: 2022/10/19
+    - content: 妹妹强制要求我买走了她的两幅画 -¥30
+      date: 2022/10/02
+      image:
+        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+    - content: 歌曲推荐
+      date: 2022/09/25
+      aplayer:
+        server: tencent
+        id: 001FGQba3i10mw
+    - content: 做了一个噩梦, 梦到从楼顶坠下去了。😷
+      date: 2022/09/24
+    - content: JOJO是真的好看！
+      date: 2022/09/21
+      link: https://www.bilibili.com/bangumi/play/ss39431?spm_id_from=333.337.0.0
+```
+主题配置文件中开启menu中关于和闲言碎语的注释，导航栏闲言碎语，注意缩进！！！
+```yml
+  关于:
+    闲言碎语: /essay/ || icon-lightbulb
+```
+### 2.6.追番页面
+在博客根目录执行
+```bash
+npm install hexo-bilibili-bangumi --save
+```
+在 hexo 配置文件_config.yml中加入以下配置，注意不是主题配置文件，更多配置请参考[hexo-bilibili-bangumi](https://github.com/HCLonely/hexo-bilibili-bangumi)
+```yml
+# 追番插件
+# https://github.com/HCLonely/hexo-bilibili-bangumi
+bangumi: # 追番设置
+  enable: true
+  source: bili
+  path:
+  vmid: 372204786
+  title: "追番列表"
+  quote: "生命不息，追番不止！"
+  show: 1
+  lazyload: false
+  loading:
+  showMyComment: false
+  pagination: false
+  metaColor:
+  color:
+  webp:
+  progress:
+  extraOrder:
+  proxy:
+    host: "代理host"
+    port: "代理端口"
+  extra_options:
+    top_img: false
+    lazyload:
+      enable: false
+```
+图例如下
+![alt text](https://img02.anheyu.com/adminuploads/1/2023/04/09/643264bec3298.png!blogimg)
+
+### 2.7.朋友圈页面
+在 Hexo 博客根目录 [blog]下打开终端，输入
+```bash
+hexo new page fcircle
+```
+打开[blog]\source\fcircle\index.md,添加一行**type: 'fcircle':**
+```markdown
+---
+title: 朋友圈
+date: 2022-11-21 17:06:17
+comments: false
+aside: false
+top_img: false
+type: "fcircle"
+---
+```
+主题配置文件中开启menu中友链和朋友圈的注释，导航栏朋友圈，注意缩进！！！
+```yml
+  友链:
+    朋友圈: /fcircle/ || icon-artstation
+```
+主题配置文件中开启friends_vue.enable，自行设置 朋友圈后端地址 和 顶部模块背景，注意缩进！！！
+```yml
+# 朋友圈配置
+friends_vue:
+  enable: false
+  vue_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.2/friends/index.f9a2b8d2.js
+  apiurl: # 朋友圈后端地址
+  top_background:
+```
+其中vue_js参数，可以将`https://npm.elemecdn.com/anzhiyu-theme-static@1.1.2/friends/index.f9a2b8d2.js`下载下来后将其中的 friends.anheyu.com替换为您的后端 url 然后上传至您的存储端以url的形式使用。
+第二种办法也可以自行下载项目后，修改代码中的 url 变量路径friends.anheyu.com为你自己的，然后执行npm run build构建后将dist文件夹中的js上传至您的存储端使用
+原项目地址：[hexo-circle-of-friends-front](https://github.com/anzhiyu-c/hexo-circle-of-friends-front/tree/anzhiyu)
+> 注意朋友圈后端爬取需使用common2，否则无法爬取到您的友链数据。
+
+图例如下：
+![alt text](https://img02.anheyu.com/adminuploads/1/2023/04/09/64326468190c2.png!blogimg)
+
+### 2.8.相册页面
+#### 2.8.1.主页面
+在 Hexo 博客根目录 [blog]下打开终端，输入
+```bash
+hexo new page album
+```
+你会找到 source/album/index.md 这个文件，修改这个文件： 记得添加 type: "album"
+```markdown
+---
+title: 相册集
+date: 2022-10-23 15:57:51
+aside: false
+top_img: false
+type: "album"
+---
+```
+主题配置文件中开启menu中我的和相册集的注释，**注意缩进！！！**
+```yml
+  我的:
+    相册集: /album/ || icon-images
+```
+新建文件[blog]\source\_data\album.yml,没有_data文件夹的话也请自己新建。打开[blog]\source\_data\album.yml，输入：
+```yml
+- class_name: 世界各地夕阳与风景
+  path_name: /wordScenery
+  type: 2
+  description: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
+  cover: https://upload-bbs.miyoushe.com/upload/2025/06/13/125766904/2cf2b6aea07bba089d0d17c4fea72d1b_5366629137934368264.png
+  top_background: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
+  rowHeight: 220
+  limit: 10
+  lazyload: true
+  btnLazyload: false
+  url: false
+  top_link: /album
+  top_btn_text: 返回
+  album_list:
+    - date: 2022/10/26 01:00:00
+      content: 湘潭的一角。
+      address: 湖南湘潭
+      from: 再吃一口就减肥
+      image:
+        - https://bu.dusays.com/2023/04/09/64329399db122.webp
+    - date: 2022-10-25
+      content: 洛阳暴雨后的天空。
+      address: 河南洛阳
+      from: 紫菜卷
+      image:
+        - https://bu.dusays.com/2023/04/09/64329399db122.webp
+        - https://bu.dusays.com/2023/04/09/64329399db2e1.webp
+
+- class_name: 我的日常
+  path_name: /dailyPhoto
+  type: 1
+  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  top_link: /album
+  top_btn_text: 返回
+  top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  cover: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  album_list:
+    - date: 2022-10-24
+      content: 老妹的画
+      image:
+        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+```
+
+#### 2.8.2.分页面
+由于相册页面需要很多的 page，所以在写数据的时候自行写入路径path_name，示例数据中有两个path_name，所以需要再创建两个页面
+注意新建的页面必须与path_name一致。
+```bash
+hexo new page dailyPhoto
+hexo new page wordScenery
+```
+你会找到 source/dailyPhoto/index.md 和source/wordScenery/index.md两个文件，这两个为相册集详情页
+然后内容为以下内容, 需在详情页加上type: "album_detail"
+```markdown
+---
+title: 日常生活
+date: 2022-10-23 15:57:51
+aside: false
+top_img: false
+type: "album_detail"
+---
+```
+
+```markdown
+---
+title: 世界各地风景
+date: 2022-10-23 15:57:51
+aside: false
+top_img: false
+type: "album_detail"
+---
+```
+远程加载json示例数据
+```json
+[
+  {
+    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0556.jpg",
+    "alt": "IMG_0556.jpg",
+    "title": "这是title"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0472.jpg",
+    "alt": "IMG_0472.jpg"
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0453.jpg",
+    "alt": ""
+  },
+  {
+    "url": "https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0931.jpg",
+    "alt": ""
+  }
+]
+```
+示例图如下：
+![alt text](https://img02.anheyu.com/adminuploads/1/2023/04/09/64326458a0f01.png!blogimg)
+![alt text](https://img02.anheyu.com/adminuploads/1/2023/04/19/643f4351c8245.webp!blogimg)
+![alt text](https://img02.anheyu.com/adminuploads/1/2023/04/19/643f42162d2f4.webp!blogimg)
+
+### 2.9.音乐馆页面
+在 Hexo 博客根目录 [blog]下打开终端，输入
+```bash
+hexo new page music
+```
+你会找到 source/music/index.md 这个文件，修改这个文件： 记得添加 type: "music"
+```markdown
+---
+title: 音乐馆
+date: 2021-04-24 21:41:30
+type: music
+aplayer: true
+top_img: false
+comments: false
+aside: false
+---
+```
+新建 source/json/music.json，此 json 为切换歌单按钮的歌单数据。
+```json
+[
+  {
+    "name": "青花瓷",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000002eFUFm2XYZ7z_2.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.lrc"
+  },
+  {
+    "name": "稻香",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.lrc"
+  },
+  {
+    "name": "晴天",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.lrc"
+  },
+  {
+    "name": "七里香",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.lrc"
+  },
+  {
+    "name": "花海",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.flac",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.lrc"
+  },
+  {
+    "name": "反方向的钟",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.flac",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.lrc"
+  },
+  {
+    "name": "兰亭序",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.lrc"
+  },
+  {
+    "name": "说好的辛福呢",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的辛福呢.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的幸福呢.lrc"
+  },
+  {
+    "name": "等你下课 (with 杨瑞代)",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000003bSL0v4bpKAx_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.lrc"
+  },
+  {
+    "name": "我落泪情绪零碎",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000000bviBl4FjTpO_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.lrc"
+  },
+  {
+    "name": "听妈妈的话",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.lrc"
+  },
+  {
+    "name": "明明就",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.flac",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000003Ow85E3pnoqi_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.lrc"
+  },
+  {
+    "name": "我是如此相信",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.flac",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000001hGx1Z0so1YX_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.lrc"
+  },
+  {
+    "name": "发如雪",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M0000024bjiL2aocxT_3.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.lrc"
+  },
+  {
+    "name": "以父之名",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.lrc"
+  },
+  {
+    "name": "园游会",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.flac",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.lrc"
+  },
+  {
+    "name": "本草纲目",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.lrc"
+  },
+  {
+    "name": "龙卷风",
+    "artist": "周杰伦",
+    "url": "https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.mp3",
+    "cover": "https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000",
+    "lrc": "https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.lrc"
+  }
+]
+```
+hexo 配置文件_config.yml中添加以下配置，**注意不是主题配置文件**
+```yml
+# APlayer
+# https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md
+aplayer:
+  meting: true
+  asset_inject: false
+```
+主题配置文件中开启menu中我的和音乐馆的注释，**注意缩进！！！**
+```yml
+  我的:
+    音乐馆: /music/ || icon-music
+```
+
+> 如何修改默认歌单?
+将menu中音乐馆的路径修改为以下格式即可/music/?id=1708664797&server=tencent，支持id和server参数。
+id 与 server 的填写请参考[MetingJS](https://github.com/metowolf/MetingJS)
+图例：
+![alt text](https://img02.anheyu.com/adminuploads/1/2023/04/09/643264b4da332.png!blogimg)
+
+## 3.参考资源
+[安知鱼主题文档](https://docs.anheyu.com/initall.html)
+
+## 4.结语
+到这里，Anzhiyu 主题绝大部分特色独立页面的配置就全部讲解完毕。
+我们一共配置了友人帐、关于、我的装备、留言板、即刻短文、追番页、朋友圈、相册集、音乐馆九大页面。这些页面是 Anzhiyu 区别于普通 Hexo 主题的核心亮点，不用自己编写 HTML 与 CSS 模板，依靠主题内置渲染能力，只需要生成页面、维护`_data`目录下的数据源 yml、调整导航菜单，就可以快速搭建起功能丰富的个人博客站点。
+配置完这些页面之后，你的博客已经不再只有单纯的文章发布功能，既可以展示个人信息、数码好物，也能够分享生活碎片、相册照片、爱好番剧与音乐，还可以和其他博主互换友链、接收访客留言，博客的完整度与个人风格直接拉满。
+后续可以继续去完善评论系统、站点 SEO、站点统计等内容，进一步打磨博客体验。希望本篇教程能够帮到正在折腾 Hexo 博客的你。
