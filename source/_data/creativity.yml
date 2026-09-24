@@ -46,7 +46,8 @@
       color: "#df5b40"
       icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/fcc0dbbfe206b4436097a8362d64b558_6981541002497327189.webp
     - name: Minecraft
-      icon: https://store-images.s-microsoft.com/image/apps.42664.13510798885735219.3576178f-5830-46af-9837-7194db7781e8.b3e584ef-cdd4-4e1c-ad75-beebd48b7018?q=90&w=177&h=177
+      color: "#323232"
+      icon: https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Global-Header_MCCB-Logo_300x51.svg
     - name: Apifox
       color: "#e65164"
       icon: https://upload-bbs.miyoushe.com/upload/2025/08/02/125766904/b61bc7287d7f7f89bd30079c7f04360e_2465770520170903938.png
