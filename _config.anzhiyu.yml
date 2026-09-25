@@ -19,7 +19,6 @@ menu:
    数码:
      CPU: /cpu/ || fa-solid fa-microchip
      手机: /mobile/ || fa-solid fa-mobile
-     电脑: /pc/ || fa-regular fa-desktop
 
 
    关于:
@@ -1073,11 +1072,6 @@ home_top:
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
-    - name: 生活
-      path: /categories/生活日常/
-      shadow: var(--anzhiyu-shadow-green)
-      class: green
-      icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: false

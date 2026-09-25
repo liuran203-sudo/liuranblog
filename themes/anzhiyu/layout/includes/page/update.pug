@@ -9,25 +9,49 @@ block content
         if site.data.update
           each item, idx in site.data.update
             .timeline-item(class=idx === 0 ? 'is-latest' : '')
-              .timeline-dot
-              .timeline-content
-                .timeline-date= item.date
-                h3.timeline-title= item.title
-                ul.timeline-log
-                  each msg in item.log
-                    li= msg
+              .timeline-axis
+                .timeline-dot
+              .timeline-card
+                //- 头部：版本号（可选）+ 最新标签（可选）
+                if item.version || item.latest
+                  .card-head
+                    if item.version
+                      h2.card-version= item.version
+                    if item.latest
+                      span.card-latest 最新
+
+                //- 日期 + 标题
+                .card-date
+                  span.icon-calendar 📅
+                  span= item.date
+                if item.title
+                  h3.card-title= item.title
+
+                //- 日志列表
+                ul.log-list
+                  each log in item.log
+                    li.log-item
+                      //- 兼容字符串和对象两种格式
+                      if typeof log === 'string'
+                        span.log-text= log
+                      else
+                        if log.hash
+                          code.log-hash= log.hash
+                        span.log-text= log.text
+                        if log.author
+                          span.log-author= log.author
         else
           p 暂无更新日志，请在 _data/update.yml 添加内容
 
 block style
   style.
     .update-page {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 40px 24px 80px;
     }
     .update-header {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
     .update-header h1 {
       font-size: 2rem;
@@ -42,88 +66,153 @@ block style
       font-size: 15px;
       color: var(--anzhiyu-secondcolor);
     }
-    /* 时间轴容器 */
+
+    /* ===== 时间轴容器 ===== */
     .update-timeline {
       position: relative;
       padding-left: 32px;
     }
-    /* 左侧竖线 */
+    /* 贯穿整条的竖线（从第一个圆点到底部） */
     .update-timeline::before {
       content: "";
       position: absolute;
-      left: 8px;
-      top: 6px;
-      bottom: 6px;
+      left: 11px;          /* 对齐圆点中心 */
+      top: 24px;           /* 从第一个圆点开始 */
+      bottom: 24px;        /* 到最后一个圆点结束 */
       width: 2px;
       background: var(--anzhiyu-card-border);
+      z-index: 1;
     }
+
     .timeline-item {
       position: relative;
-      padding-bottom: 32px;
+      padding-bottom: 28px;
     }
     .timeline-item:last-child {
       padding-bottom: 0;
     }
-    /* 时间轴圆点 */
-    .timeline-dot {
+
+    /* ===== 圆点 ===== */
+    .timeline-axis {
       position: absolute;
-      left: -32px;
-      top: 6px;
-      width: 14px;
-      height: 14px;
+      left: -32px;         /* 相对 update-timeline 的左内边距定位 */
+      top: 22px;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+    /* 普通圆点：空心小圆 */
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: var(--anzhiyu-card-bg);
       border: 3px solid var(--anzhiyu-card-border);
       box-sizing: border-box;
       transition: 0.3s;
     }
-    /* 最新一条高亮 */
+    /* 最新一条：大号实心圆点 */
     .timeline-item.is-latest .timeline-dot {
-      border-color: var(--anzhiyu-main);
+      width: 18px;
+      height: 18px;
       background: var(--anzhiyu-main);
+      border: 4px solid var(--anzhiyu-main);
       box-shadow: 0 0 0 4px rgba(66, 90, 239, 0.15);
     }
-    /* 卡片 */
-    .timeline-content {
+
+    /* ===== 卡片 ===== */
+    .timeline-card {
       background: var(--anzhiyu-card-bg);
       border-radius: 12px;
-      padding: 18px 22px;
-      transition: 0.3s;
+      padding: 20px 24px;
       border: 1px solid transparent;
+      transition: 0.3s;
     }
-    .timeline-content:hover {
-      transform: translateX(4px);
+    .timeline-card:hover {
       border-color: var(--anzhiyu-main);
+      transform: translateX(4px);
     }
-    .timeline-date {
-      display: inline-block;
-      font-size: 13px;
-      color: var(--anzhiyu-main);
-      background: rgba(66, 90, 239, 0.1);
-      padding: 2px 10px;
-      border-radius: 6px;
+
+    /* 头部 */
+    .card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 8px;
+    }
+    .card-version {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0;
+    }
+    .card-latest {
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+      background: linear-gradient(135deg, #425aef, #4a90e2);
+      padding: 2px 8px;
+      border-radius: 6px;
       font-weight: 500;
     }
-    .timeline-title {
+
+    /* 日期 + 标题 */
+    .card-date {
+      font-size: 13px;
+      color: var(--anzhiyu-secondcolor);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .card-title {
       font-size: 17px;
       font-weight: 700;
       color: var(--anzhiyu-fontcolor);
-      margin: 0 0 10px;
+      margin: 0 0 12px;
     }
-    .timeline-log {
+
+    /* 日志列表 */
+    .log-list {
       margin: 0;
       padding-left: 1.2em;
     }
-    .timeline-log li {
+    .log-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 4px 0;
       font-size: 14px;
-      line-height: 1.8;
-      color: var(--anzhiyu-secondcolor);
-      margin: 4px 0;
+      line-height: 1.7;
+      color: var(--anzhiyu-fontcolor);
     }
-    .timeline-log li::marker {
+    .log-item::marker {
       color: var(--anzhiyu-main);
     }
+    .log-hash {
+      flex-shrink: 0;
+      font-family: "JetBrains Mono", Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #fff;
+      background: var(--anzhiyu-main);
+      padding: 1px 7px;
+      border-radius: 4px;
+      margin-top: 2px;
+    }
+    .log-text {
+      flex: 1;
+      word-break: break-word;
+    }
+    .log-author {
+      flex-shrink: 0;
+      font-size: 12px;
+      color: var(--anzhiyu-secondcolor);
+      margin-left: auto;
+    }
+
     /* 隐藏侧边栏、评论、目录 */
     #aside-content,
     #post-comment,
@@ -139,9 +228,11 @@ block style
     .main {
       width: 100% !important;
     }
+
+    /* 移动端 */
     @media (max-width: 768px) {
       .update-page {
-        padding: 24px 16px 60px;
+        padding: 24px 12px 60px;
       }
       .update-header h1 {
         font-size: 1.5rem;
@@ -149,13 +240,30 @@ block style
       .update-timeline {
         padding-left: 26px;
       }
-      .timeline-dot {
-        left: -26px;
-        width: 12px;
-        height: 12px;
+      .update-timeline::before {
+        left: 9px;
       }
-      .timeline-content {
+      .timeline-axis {
+        left: -26px;
+        top: 20px;
+        width: 18px;
+        height: 18px;
+      }
+      .timeline-item.is-latest .timeline-dot {
+        width: 16px;
+        height: 16px;
+      }
+      .timeline-card {
         padding: 14px 16px;
+      }
+      .log-item {
+        flex-wrap: wrap;
+      }
+      .log-author {
+        margin-left: 0;
+        width: 100%;
+        text-align: right;
+        margin-top: 2px;
       }
     }
 

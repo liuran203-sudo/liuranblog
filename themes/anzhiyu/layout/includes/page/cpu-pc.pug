@@ -1,0 +1,192 @@
+block content
+  #page
+    .cpu-page
+      .cpu-header
+        a.cpu-back(href="/cpu/")
+          i.fa-solid.fa-arrow-left
+          span 返回 CPU 资料库
+        h1= site.data['cpu-pc'].title || page.title
+        p= site.data['cpu-pc'].description || page.description
+
+      if site.data['cpu-pc'] && site.data['cpu-pc'].brands
+        each brand in site.data['cpu-pc'].brands
+          .cpu-brand
+            .cpu-brand-title
+              if brand.icon
+                i(class=brand.icon)
+              span= brand.name
+            .cpu-chip-grid
+              each chip in brand.chips
+                .cpu-chip-card
+                  h3.chip-name= chip.name
+                  .chip-specs
+                    if chip.socket
+                      .spec-item
+                        span.spec-label 接口
+                        span.spec-value= chip.socket
+                    if chip.cores
+                      .spec-item
+                        span.spec-label 核心
+                        span.spec-value= chip.cores
+                    if chip.threads
+                      .spec-item
+                        span.spec-label 线程
+                        span.spec-value= chip.threads
+                    if chip.freq
+                      .spec-item
+                        span.spec-label 频率
+                        span.spec-value= chip.freq
+                    if chip.tdp
+                      .spec-item
+                        span.spec-label TDP
+                        span.spec-value= chip.tdp
+                    if chip.release
+                      .spec-item
+                        span.spec-label 发布
+                        span.spec-value= chip.release
+                  if chip.score
+                    .chip-score
+                      span 跑分
+                      strong= chip.score
+                  if chip.desc
+                    p.chip-desc= chip.desc
+      else
+        #article-container.cpu-content
+          != page.content
+
+block style
+  style.
+    .cpu-page {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .cpu-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--anzhiyu-secondcolor);
+      text-decoration: none;
+      margin-bottom: 18px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: var(--anzhiyu-card-bg);
+      border: 1px solid var(--anzhiyu-card-border);
+      transition: 0.3s;
+    }
+    .cpu-back:hover {
+      color: var(--anzhiyu-main);
+      border-color: var(--anzhiyu-main);
+      transform: translateX(-2px);
+    }
+    .cpu-back i { font-size: 12px; }
+    .cpu-header { margin-bottom: 28px; }
+    .cpu-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--anzhiyu-card-border);
+    }
+    .cpu-header p {
+      margin: 12px 0 0;
+      font-size: 15px;
+      color: var(--anzhiyu-secondcolor);
+      line-height: 1.6;
+    }
+    .cpu-brand { margin-bottom: 40px; }
+    .cpu-brand-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 4px solid var(--anzhiyu-main);
+    }
+    .cpu-brand-title i { color: var(--anzhiyu-main); }
+    .cpu-chip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .cpu-chip-card {
+      background: var(--anzhiyu-card-bg);
+      border-radius: 12px;
+      padding: 18px 20px;
+      border: 1px solid var(--anzhiyu-card-border);
+      transition: 0.3s;
+    }
+    .cpu-chip-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--anzhiyu-main);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    .chip-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0 0 12px;
+    }
+    .chip-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .spec-label { color: var(--anzhiyu-secondcolor); }
+    .spec-value { color: var(--anzhiyu-fontcolor); font-weight: 500; }
+    .chip-score {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: rgba(66, 90, 239, 0.08);
+      color: var(--anzhiyu-secondcolor);
+      margin-bottom: 10px;
+    }
+    .chip-score strong { color: var(--anzhiyu-main); font-size: 15px; }
+    .chip-desc {
+      margin: 0;
+      font-size: 12px;
+      color: var(--anzhiyu-secondcolor);
+      line-height: 1.6;
+    }
+    .cpu-content {
+    }
+    #aside-content,
+    #post-comment,
+    .post-comment,
+    #card-toc,
+    #toc,
+    .toc,
+    .post-toc,
+    .article-toc,
+    .toc-container {
+      display: none !important;
+    }
+    .main { width: 100% !important; }
+    @media (max-width: 768px) {
+      .cpu-page { padding: 24px 16px 60px; }
+      .cpu-header h1 { font-size: 1.5rem; }
+      .cpu-back { font-size: 13px; padding: 5px 10px; }
+      .cpu-chip-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+block script
+  script.
+    // 电脑处理器页面无需额外脚本

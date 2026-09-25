@@ -1,8 +1,7 @@
 ---
-date: 2026-09-11
-aside: false
-top_img: false
+description: 整理手机与桌面处理器参数信息
 comments: false
-layout: page
-type: "cpu"
+aside: false
+toc: false
+type: cpu
 ---

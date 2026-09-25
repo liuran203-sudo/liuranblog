@@ -1,0 +1,100 @@
+block content
+  #page
+    .cpu-page
+      .cpu-header
+        a.cpu-back(href="/cpu/")
+          i.fa-solid.fa-arrow-left
+          span 返回 CPU 资料库
+        h1= page.title || '手机处理器'
+        p= page.description || '移动端 SoC，手机芯片参数、制程、跑分、发布时间'
+
+      #article-container.cpu-content
+        != page.content
+
+block style
+  style.
+    .cpu-page {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    /* 返回按钮 */
+    .cpu-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--anzhiyu-secondcolor);
+      text-decoration: none;
+      margin-bottom: 18px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: var(--anzhiyu-card-bg);
+      border: 1px solid var(--anzhiyu-card-border);
+      transition: 0.3s;
+    }
+    .cpu-back:hover {
+      color: var(--anzhiyu-main);
+      border-color: var(--anzhiyu-main);
+      transform: translateX(-2px);
+    }
+    .cpu-back i {
+      font-size: 12px;
+    }
+
+    /* 头部 */
+    .cpu-header {
+      margin-bottom: 28px;
+    }
+    .cpu-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--anzhiyu-card-border);
+    }
+    .cpu-header p {
+      margin: 12px 0 0;
+      font-size: 15px;
+      color: var(--anzhiyu-secondcolor);
+      line-height: 1.6;
+    }
+
+    /* 内容区，排版交给 #article-container */
+    .cpu-content {
+    }
+
+    /* 隐藏侧边栏、评论、目录 */
+    #aside-content,
+    #post-comment,
+    .post-comment,
+    #card-toc,
+    #toc,
+    .toc,
+    .post-toc,
+    .article-toc,
+    .toc-container {
+      display: none !important;
+    }
+    .main {
+      width: 100% !important;
+    }
+
+    /* 移动端 */
+    @media (max-width: 768px) {
+      .cpu-page {
+        padding: 24px 16px 60px;
+      }
+      .cpu-header h1 {
+        font-size: 1.5rem;
+      }
+      .cpu-back {
+        font-size: 13px;
+        padding: 5px 10px;
+      }
+    }
+
+block script
+  script.
+    // 手机处理器页面无需额外脚本

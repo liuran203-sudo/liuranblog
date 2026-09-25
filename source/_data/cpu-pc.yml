@@ -1,0 +1,47 @@
+title: 电脑处理器
+description: 桌面端 CPU，Intel / AMD 处理器规格汇总
+
+brands:
+  - name: Intel
+    icon: fa-brands fa-intel
+    chips:
+      - name: i9-14900K
+        socket: LGA 1700
+        cores: 24 核（8P+16E）
+        threads: 32 线程
+        freq: 3.2GHz / 6.0GHz
+        tdp: 125W
+        release: 2023-10
+        score: 65000
+        desc: Intel 14 代旗舰，游戏与生产力兼顾
+      - name: i7-14700K
+        socket: LGA 1700
+        cores: 20 核（8P+12E）
+        threads: 28 线程
+        freq: 3.4GHz / 5.6GHz
+        tdp: 125W
+        release: 2023-10
+        score: 55000
+        desc: 性价比高，多核性能提升明显
+
+  - name: AMD
+    icon: fa-brands fa-amd
+    chips:
+      - name: Ryzen 9 7950X
+        socket: AM5
+        cores: 16 核
+        threads: 32 线程
+        freq: 4.5GHz / 5.7GHz
+        tdp: 170W
+        release: 2022-09
+        score: 63000
+        desc: Zen 4 旗舰，生产力强
+      - name: Ryzen 7 7800X3D
+        socket: AM5
+        cores: 8 核
+        threads: 16 线程
+        freq: 4.2GHz / 5.0GHz
+        tdp: 120W
+        release: 2023-04
+        score: 48000
+        desc: 3D V-Cache，游戏性能天花板

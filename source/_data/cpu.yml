@@ -1,0 +1,12 @@
+description: 整理手机与桌面处理器参数信息
+
+categories:
+  - name: 手机处理器
+    href: /cpu/mc/
+    icon: fa-solid fa-mobile-screen
+    desc: 移动端 SoC，手机芯片参数、制程、跑分、发布时间
+
+  - name: 电脑处理器
+    href: /cpu/pc/
+    icon: fa-solid fa-desktop
+    desc: 桌面端 CPU，Intel / AMD 处理器规格汇总

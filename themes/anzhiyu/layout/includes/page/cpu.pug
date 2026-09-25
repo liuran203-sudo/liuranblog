@@ -1,62 +1,152 @@
 block content
-  .page.cpu-index-page
-    .page-title
-      h1 CPU资料库
-      p 整理手机与桌面处理器参数信息
+  #page
+    .cpu-home-page
+      .cpu-home-header
+        h1= page.title || 'CPU 资料库'
+        p= page.description || '整理手机与桌面处理器参数信息'
 
-    .cpu-home-container
-      .cpu-card-wrap
-        a.cpu-home-card(href="/mobilecpu/")
-          .card-icon
-            i.fa-solid-fa-mobile
-          h3 手机处理器
-          p 移动端SoC，手机芯片参数、制程、跑分、发布时间
-        a.cpu-home-card(href="/computercpu/")
-          .card-icon
-            i.fa-regular-fa-desktop
-          h3 电脑处理器
-          p 桌面端CPU，Intel / AMD 处理器规格汇总
+      .cpu-home-container
+        .cpu-card-wrap
+          a.cpu-home-card(href="/cpu/mc/")
+            .card-icon
+              i.fa-solid.fa-mobile-screen
+            h3 手机处理器
+            p 移动端 SoC，手机芯片参数、制程、跑分、发布时间
 
-style.
-  .cpu-home-container {
-    max-width:860px;
-    margin:3rem auto;
-    padding:0 1rem;
-  }
-  .cpu-card-wrap {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:1.5rem;
-  }
-  .cpu-home-card {
-    display:block;
-    background:var(--anzhiyu-card-bg);
-    border-radius:12px;
-    padding:2rem;
-    text-align:center;
-    border:1px solid var(--anzhiyu-card-border);
-    transition: 0.3s;
-  }
-  .cpu-home-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--anzhiyu-shadow);
-  }
-  .cpu-home-card .card-icon {
-    font-size:2.4rem;
-    color:var(--anzhiyu-main);
-    margin-bottom:1rem;
-  }
-  .cpu-home-card h3 {
-    font-size:1.25rem;
-    margin-bottom:0.6rem;
-  }
-  .cpu-home-card p {
-    color:var(--anzhiyu-fontcolor-2);
-    font-size:0.92rem;
-    line-height:1.6;
-  }
-  @media(max-width:640px){
-    .cpu-card-wrap{
-      grid-template-columns:1fr;
+          a.cpu-home-card(href="/cpu/pc/")
+            .card-icon
+              i.fa-solid.fa-desktop
+            h3 电脑处理器
+            p 桌面端 CPU，Intel / AMD 处理器规格汇总
+
+block style
+  style.
+    .cpu-home-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
     }
-  }
+    .cpu-home-header {
+      margin-bottom: 32px;
+    }
+    .cpu-home-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--anzhiyu-card-border);
+    }
+    .cpu-home-header p {
+      margin: 12px 0 0;
+      font-size: 15px;
+      color: var(--anzhiyu-secondcolor);
+    }
+
+    /* ===== 居中卡片容器 ===== */
+    .cpu-card-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    /* ===== 卡片 ===== */
+    .cpu-home-card {
+      flex: 0 1 320px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--anzhiyu-card-bg);
+      border-radius: 16px;
+      padding: 40px 28px;
+      text-align: center;
+      border: 1px solid var(--anzhiyu-card-border);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    .cpu-home-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-color: var(--anzhiyu-main);
+    }
+
+    /* 图标 */
+    .cpu-home-card .card-icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(66, 90, 239, 0.1);
+      color: var(--anzhiyu-main);
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .cpu-home-card:hover .card-icon {
+      background: var(--anzhiyu-main);
+      color: #fff;
+      transform: scale(1.08);
+    }
+
+    /* 标题 */
+    .cpu-home-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--anzhiyu-fontcolor);
+      margin: 0 0 10px;
+    }
+
+    /* 描述 */
+    .cpu-home-card p {
+      color: var(--anzhiyu-secondcolor);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* 隐藏侧边栏、评论、目录 */
+    #aside-content,
+    #post-comment,
+    .post-comment,
+    #card-toc,
+    #toc,
+    .toc,
+    .post-toc,
+    .article-toc,
+    .toc-container {
+      display: none !important;
+    }
+    .main {
+      width: 100% !important;
+    }
+
+    /* 移动端 */
+    @media (max-width: 640px) {
+      .cpu-home-page {
+        padding: 24px 16px 60px;
+      }
+      .cpu-home-header h1 {
+        font-size: 1.5rem;
+      }
+      .cpu-card-wrap {
+        gap: 16px;
+        margin-top: 24px;
+      }
+      .cpu-home-card {
+        flex: 1 1 100%;
+        padding: 28px 20px;
+      }
+    }
+
+block script
+  script.
+    // CPU 首页无需额外脚本

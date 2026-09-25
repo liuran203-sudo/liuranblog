@@ -1,0 +1,675 @@
+title: 手机处理器
+description: 移动端 SoC，手机芯片参数、制程、跑分、发布时间
+
+brands:
+  - name: 高通骁龙
+    icon: fa-solid fa-microchip
+    chips:
+      - name: 骁龙 8Elite Extreme Gen6
+        process: 2nm
+        cores: "待补充"
+        freq: "待补充"
+        gpu: "待补充"
+        release: 2026-09
+        score: "待补充"
+        desc: " "
+      - name: 骁龙 8Elite Gen6
+        process: 2nm
+        cores: "待补充"
+        freq: "待补充"
+        gpu: "待补充"
+        release: 2026-09
+        score: "待补充"
+        desc: " "
+      - name: 骁龙 8Gen5
+        process: 3nm
+        cores: 2+6 核
+        freq: 3.8+3.32GHz
+        gpu: Adreno 840
+        release: 2025-09
+        score: "1933243"
+        desc: " "
+      - name: 骁龙 8Elite Gen5
+        process: 3nm
+        cores: 2+6 核
+        freq: 4.6+3.62GHz
+        gpu: Adreno 840
+        release: 2025-09
+        score: "2449060"
+        desc: " "
+      - name: 骁龙 8sGen4
+        process: 3nm
+        cores: 1+3+2+2 核
+        freq: 3.2+3.0+2.8+2.02GHz
+        gpu: Adreno 800
+        release: 2025-04
+        score: "1416433"
+        desc: " "
+      - name: 骁龙 8Elite
+        process: 3nm
+        cores: 2+6 核
+        freq: 4.32+3.53GHz
+        gpu: Adreno 830
+        release: 2024-10
+        score: "1990417"
+        desc: "被天玑9300+打急的产物"
+      - name: 骁龙 8sGen3
+        process: 4nm
+        cores: 1+4+3 核
+        freq: 3+2.8+2.0GHz
+        gpu: Adreno 735
+        release: 2024-03
+        score: "1023936"
+        desc: ""
+      - name: 骁龙 8Gen3
+        process: 4nm
+        cores: 1+3+2+2 核
+        freq: 3.3+3.2+3+2.3GHz
+        gpu: Adreno 750
+        release: 2023-10
+        score: "1372529"
+        desc: ""
+      - name: 骁龙 8Gen2
+        process: 4nm
+        cores: 1+2+2+3 核
+        freq: 3.2+2.8+2.8+2GHz
+        gpu: Adreno 740
+        release: 2022-11
+        score: "952809"
+        desc: ""
+      - name: 骁龙 8+Gen1
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.2+2.5+1.8GHz
+        gpu: Adreno 730
+        release: 2022-05
+        score: "728767"
+        desc: "救火英雄"
+      - name: 骁龙 8Gen1
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3+2.5+1.8GHz
+        gpu: Adreno 730
+        release: 2021-11
+        score: "655840"
+        desc: "火龙王Pro"
+      - name: 骁龙 888+
+        process: 5nm
+        cores: 1+3+4 核
+        freq: 3+2.42+1.8GHz
+        gpu: Adreno 660
+        release: 2020-12
+        score: "609011"
+        desc: "火龙王"
+      - name: 骁龙 870
+        process: 7nm
+        cores: 1+3+4 核
+        freq: 3.2+2.42+1.8GHz
+        gpu: Adreno 650-645MHz
+        release: 2020-12
+        score: "587845"
+        desc: "一代神U"
+      - name: 骁龙 888
+        process: 5nm
+        cores: 1+3+4 核
+        freq: 2.84+2.42+1.8GHz
+        gpu: Adreno 660
+        release: 2020-12
+        score: "598064"
+        desc: "火龙降世，小米最严厉的父亲，有着炎龙侠之称号"
+      - name: 骁龙 865+
+        process: 7nm
+        cores: 1+3+4 核
+        freq: 3.1+2.42+1.8GHz
+        gpu: Adreno 650-545MHz
+        release: 2020-07
+        score: "585852"
+        desc: " "
+      - name: 骁龙 865
+        process: 7nm
+        cores: 1+3+4 核
+        freq: 2.84+2.42+1.8GHz
+        gpu: Adreno 640-587MHz
+        release: 2019-12
+        score: "555091"
+        desc: "一代神U"
+      - name: 骁龙 855+
+        process: 7nm
+        cores: 1+3+4 核
+        freq: 2.96+2.42+1.8GHz
+        gpu: Adreno 640-675MHz
+        release: 2019-07
+        score: "436738"
+        desc: " "
+      - name: 骁龙 860
+        process: 7nm
+        cores: 1+3+4 核
+        freq: 2.96+2.42+1.8GHz
+        gpu: Adreno 640-675MHz
+        release: 2019-07
+        score: "417652"
+        desc: " "
+      - name: 骁龙 855
+        process: 7nm
+        cores: 1+3+4 核
+        freq: 2.84+2.42+1.8GHz
+        gpu: Adreno 640-585MHz
+        release: 2018-12
+        score: "429777"
+        desc: " "
+      - name: 骁龙 845
+        process: 10nm
+        cores: 4+4 核
+        freq: 2.8+1.8GHz
+        gpu: Adreno 630-710MHz
+        release: 2017-12
+        score: "317455"
+        desc: " "
+      - name: 骁龙 835
+        process: 10nm
+        cores: 4+4 核
+        freq: 2.45+1.9GHz
+        gpu: Adreno 540-710MHz
+        release: 2016-10
+        score: "253008"
+        desc: "一代神U"
+      - name: 骁龙 821(MSM8996Pro-AC)
+        process: 14nm
+        cores: 2+2 核
+        freq: 2.342+2.188GHz
+        gpu: Adreno 530-653MHz
+        release: 2016-10
+        score: "190965"
+        desc: " "
+      - name: 骁龙 820
+        process: 14nm
+        cores: 2+2 核
+        freq: 2.15+1.593GHz
+        gpu: Adreno 530-624MHz
+        release: 2015-12
+        score: "190169"
+        desc: " "
+      - name: 骁龙 810
+        process: 20nm
+        cores: 4+4 核
+        freq: 2.0+1.5GHz
+        gpu: Adreno 430-600MHz
+        release: 2014-04
+        score: "58338"
+        desc: " "
+      - name: 骁龙 808
+        process: 20nm
+        cores: 2+4 核
+        freq: 1.82+1.44GHz
+        gpu: Adreno 418-600MHz
+        release: 2014
+        score: "71432"
+        desc: " "
+      - name: 骁龙 800
+        process: 28nm
+        cores: 4 核
+        freq: 2.36GHz
+        gpu: Adreno 330-578MHz
+        release: 2013
+        score: "未知"
+        desc: "晓龙8系列!"
+      - name: 骁龙 7Gen4
+        process: 4nm
+        cores: 1+4+3 核
+        freq: 2.8+2.4+1.8GHz
+        gpu: Adreno 730
+        release: 2025-05
+        score: "738579"
+        desc: " "
+      - name: 骁龙 7sGen3
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 2.5+2.4+1.8GHz
+        gpu: Adreno 810
+        release: 2024-08
+        score: "572667"
+        desc: " "
+      - name: 骁龙 7+Gen3
+        process: 4nm
+        cores: 1+4+3 核
+        freq: 2.8+2.6+1.9GHz
+        gpu: Adreno 732
+        release: 2023-11
+        score: "905324"
+        desc: " "
+      - name: 骁龙 7Gen3
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 2.6+2.4+1.8GHz
+        gpu: Adreno 720
+        release: 2023-11
+        score: "607094"
+        desc: " "
+      - name: 骁龙 7sGen2
+        process: 4nm
+        cores: 4+4 核
+        freq: 2.4+1.95GHz
+        gpu: Adreno 710
+        release: 2023-09
+        score: "399300"
+        desc: " "
+      - name: 骁龙 7+Gen2
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 2.9+2.5+1.8GHz
+        gpu: Adreno 725
+        release: 2023-03
+        score: "672317"
+        desc: " "
+      - name: 骁龙 7Gen1
+        process: 4nm
+        cores: 4+4 核
+        freq: 2.4+1.8GHz
+        gpu: Adreno 662
+        release: 2022-05
+        score: "432428"
+        desc: " "
+      - name: 骁龙 778G
+        process: 台积电 6nm
+        cores: 1+4+3 核
+        freq: 2.4+2.2+1.9GHz
+        gpu: Adreno 642L
+        release: 2021-05
+        score: "400426"
+        desc: " "
+      - name: 骁龙 780G
+        process: 5nm
+        cores: 1+4+3 核
+        freq: 2.4+2.2+1.9GHz
+        gpu: Adreno 642
+        release: 2021-03
+        score: "414162"
+        desc: "小火龙"
+      - name: 骁龙 750G
+        process: 8nm
+        cores: 2+6 核
+        freq: 2.3+1.8GHz
+        gpu: Adreno 619
+        release: 2020-09
+        score: "275764"
+        desc: " "
+      - name: 骁龙 720G
+        process: 8nm
+        cores: 2+6 核
+        freq: 2.3+1.8GHz
+        gpu: Adreno 618
+        release: 2020-01
+        score: "282758"
+        desc: " "
+      - name: 骁龙 765G
+        process: 8nm
+        cores: 1+1+6 核
+        freq: 2.4+2.2+1.8GHz
+        gpu: Adreno 620
+        release: 2019-12
+        score: "307327"
+        desc: " "
+      - name: 骁龙 730G
+        process: 8nm
+        cores: 2+6 核
+        freq: 2.2+1.8GHz
+        gpu: Adreno 618
+        release: 2019-04
+        score: "261461"
+        desc: " "
+      - name: 骁龙 712
+        process: 20nm
+        cores: 2+6 核
+        freq: 2.3+1.7GHz
+        gpu: Adreno 616
+        release: 2019-02
+        score: "217055"
+        desc: " "
+      - name: 骁龙 710
+        process: 20nm
+        cores: 2+6 核
+        freq: 2.2+1.7GHz
+        gpu: Adreno 616
+        release: 2018-05
+        score: "206611"
+        desc: " "
+      - name: 骁龙 6Gen4
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 2.3+2.21+1.8GHz
+        gpu: Adreno 800
+        release: 2024-10
+        score: "523312"
+        desc: " "
+      - name: 骁龙 6Gen3
+        process: 4nm
+        cores: 4+4 核
+        freq: 2.4+1.8GHz
+        gpu: Adreno 710
+        release: 2024-09
+        score: "389396"
+        desc: " "
+      - name: 骁龙 6sGen3
+        process: 6nm
+        cores: 2+6 核
+        freq: 2.3+1.7GHz
+        gpu: Adreno 619
+        release: 2024-06
+        score: "319746"
+        desc: " "
+      - name: 骁龙 6Gen1
+        process: 4nm
+        cores: 4+4 核
+        freq: 2.2+1.8GHz
+        gpu: Adreno 710
+        release: 2022-09
+        score: "367251"
+        desc: " "
+      - name: 骁龙 690
+        process: 8nm
+        cores: 2+6 核
+        freq: 2.0+1.7GHz
+        gpu: Adreno 619L
+        release: 2020-06
+        score: "290969"
+        desc: " "
+      - name: 骁龙 680
+        process: 6nm
+        cores: 4+4 核
+        freq: 2.4+1.8GHz
+        gpu: Adreno 610
+        release: 2020-12
+        score: "211189"
+        desc: "未解之谜：晓龙到底造了多少颗680"
+      - name: 骁龙 670
+        process: 10nm
+        cores: 2+6 核
+        freq: 2.0+1.7GHz
+        gpu: Adreno 615
+        release: 2018-08
+        score: "191333"
+        desc: " "
+      - name: 骁龙 660
+        process: 14nm
+        cores: 4+4 核
+        freq: 2.2+1.84GHz
+        gpu: Adreno 512
+        release: 2017-05
+        score: "169306"
+        desc: " "
+      - name: 骁龙 630
+        process: 14nm
+        cores: 4+4 核
+        freq: 1.7GHz
+        gpu: Adreno 508
+        release: 2017-05
+        score: "114761"
+        desc: " "
+      - name: 骁龙 625
+        process: 14nm
+        cores: 8 核
+        freq: 2.0GHz
+        gpu: Adreno 506-650MHz
+        release: 2015-02
+        score: "54314"
+        desc: " "
+      - name: 骁龙 617
+        process: 28nm
+        cores: 4+4 核
+        freq: 1.5+1.2GHz
+        gpu: Adreno 405-550MHz
+        release: 2015-09
+        score: "40147"
+        desc: " "
+      - name: 骁龙 618
+        process: 28nm
+        cores: 2+4 核
+        freq: 1.8+1.4GHz
+        gpu: Adreno 510-600MHz
+        release: 2015-02
+        score: "未知"
+        desc: " "
+      - name: 骁龙 615
+        process: 28nm
+        cores: 4+4 核
+        freq: 1.5+1.0GHz
+        gpu: Adreno 405-550MHz
+        release: 2014-02
+        score: "未知"
+        desc: " "
+      - name: 骁龙 610
+        process: 28nm
+        cores: 4 核
+        freq: 1.7GHz
+        gpu: Adreno 405-550MHz
+        release: 2014-02
+        score: "未知"
+        desc: " "
+      - name: 骁龙 600
+        process: 28nm
+        cores: 4 核
+        freq: 1.9GHz
+        gpu: Adreno 320-450MHz
+        release: 2013-01
+        score: "未知"
+        desc: " "
+      - name: 骁龙 4sGen2
+        process: 4nm
+        cores: 2+6 核
+        freq: 2.3GHz
+        gpu: "Adreno - "
+        release: 2024-06
+        score: "253265"
+        desc: " "
+      - name: 骁龙 4Gen2
+        process: 4nm
+        cores: 2+6 核
+        freq: 2.2GHz
+        gpu: Adreno 613
+        release: 2023-06
+        score: "282323"
+        desc: "4纳米芯片！"
+      - name: 骁龙 4Gen1
+        process: 6nm
+        cores: 2+6 核
+        freq: 2.016GHz
+        gpu: Adreno 619
+        release: 2022-10
+        score: "280652"
+        desc: "6纳米芯片！"
+      - name: 骁龙 480+
+        process: 8nm
+        cores: 2+6 核
+        freq: 2.2GHz
+        gpu: Adreno 619
+        release: 2021-04
+        score: "266376"
+        desc: "8纳米芯片！"
+      - name: 骁龙 480
+        process: 8nm
+        cores: 2+6 核
+        freq: 2GHz
+        gpu: Adreno 619
+        release: 2021-04
+        score: "258298"
+        desc: "8纳米芯片！"
+      - name: 骁龙 460
+        process: 11nm
+        cores: 2+6 核
+        freq: 1.8GHz
+        gpu: Adreno 610
+        release: 2020
+        score: "182071"
+        desc: "11nm！！！"
+      - name: 骁龙 439
+        process: 12nm
+        cores: 4+4 核
+        freq: 1.95GHz
+        gpu: Adreno 505
+        release: 2018-06
+        score: "95471"
+        desc: "12nm！！！"
+      - name: 骁龙 450
+        process: 28nm
+        cores: 8 核
+        freq: 1.8GHz
+        gpu: Adreno 506-600MHz
+        release: 2017-06
+        score: "81744"
+        desc: "战神登场"
+      - name: 骁龙 435
+        process: 28nm
+        cores: 8 核
+        freq: 1.4GHz
+        gpu: Adreno 550
+        release: 2016-02
+        score: "36900"
+        desc: " "
+      - name: 骁龙 430
+        process: 28nm
+        cores: 8 核
+        freq: 1.4GHz
+        gpu: Adreno 405-450MHz
+        release: 2016-02
+        score: "30814"
+        desc: "八核时代！"
+      - name: 骁龙 410
+        process: 28nm
+        cores: 4 核
+        freq: 1.4GHz
+        gpu: Adreno 306-450MHz
+        release: 2013-12
+        score: "未知"
+        desc: " "
+      - name: 骁龙 400
+        process: 28nm
+        cores: 4 核
+        freq: 1.7GHz
+        gpu: Adreno 305-400MHz
+        release: 2013
+        score: "232"
+        desc: " "
+      - name: 骁龙 215
+        process: 28nm
+        cores: 4 核
+        freq: 1.3GHz
+        gpu: Adreno 308
+        release: 2019-07
+        score: "395"
+        desc: " "
+      - name: 骁龙 212
+        process: 28nm
+        cores: 4 核
+        freq: 1.3GHz
+        gpu: Adreno 304
+        release: 2015-07
+        score: "131"
+        desc: " "
+      - name: 骁龙 200
+        process: 45nm
+        cores: 4 核
+        freq: 1.4GHz
+        gpu: Adreno 203-400MHz
+        release: 2013
+        score: "未知"
+        desc: " "
+      - name: 骁龙 S4 Pro(APQ8064)
+        process: 28nm
+        cores: 4 核
+        freq: 1.7GHz
+        gpu: Adreno 320-400MHz
+        release: 2012-03
+        score: "未知"
+        desc: "4核时代！"
+      - name: 骁龙 S4 Pro
+        process: 28nm
+        cores: 2 核
+        freq: 1.7GHz
+        gpu: Adreno 320-400MHz
+        release: 2012-03
+        score: "未知"
+        desc: " "
+      - name: 骁龙 S4 Plus
+        process: 28nm
+        cores: 2 核
+        freq: 1.5GHz
+        gpu: Adreno 225-400MHz
+        release: 2012-03
+        score: "未知"
+        desc: "制程再破新高！"
+      - name: 骁龙 S4 Paly
+        process: 45nm
+        cores: 2 核
+        freq: 1.2GHz
+        gpu: Adreno 203-320MHz
+        release: 2012
+        score: "未知"
+        desc: "S4赛季！"
+      - name: 骁龙 MSM8620
+        process: 45nm
+        cores: 2 核
+        freq: 1.7GHz
+        gpu: Adreno 220-266MHz
+        release: 2010
+        score: "未知"
+        desc: "双核时代！！"
+      - name: 骁龙 QSD8250
+        process: 45nm
+        cores: 1 核
+        freq: 1GHz
+        gpu: Adreno 200-226MHz
+        release: 2008
+        score: "未知"
+        desc: "制程突破！"
+      - name: 骁龙 MSM7225
+        process: 65nm
+        cores: 1 核
+        freq: 528MHz
+        gpu: 未知
+        release: 2007
+        score: 未知
+        desc: 上古产物
+
+  - name: 联发科天玑
+    icon: fa-solid fa-microchip
+    chips:
+      - name: 天玑 9300
+        process: 台积电 4nm
+        cores: 8 核
+        freq: 3.25GHz
+        gpu: Immortalis-G720
+        release: 2023-11
+        score: 2100000
+        desc: 全大核架构，性能对标骁龙 8 Gen 3
+      - name: 天玑 9200
+        process: 台积电 4nm
+        cores: 8 核
+        freq: 3.05GHz
+        gpu: Immortalis-G715
+        release: 2022-11
+        score: 1500000
+        desc: 上代旗舰，性价比高
+
+  - name: 苹果 A 系列
+    icon: fa-solid fa-microchip
+    chips:
+      - name: A17 Pro
+        process: 台积电 3nm
+        cores: 6 核
+        freq: 3.78GHz
+        gpu: 6 核 GPU
+        release: 2023-09
+        score: 2300000
+        desc: 首款 3nm 手机芯片，单核性能领先
+
+  - name: 小米
+    icon: fa-solid fa-microchip
+    chips:
+      - name: 玄戒 O1
+        process: 台积电 3nm
+        cores: 6 核
+        freq: 3.78GHz
+        gpu: 6 核 GPU
+        release: 2023-09
+        score: 2300000
+        desc: 首款 3nm 手机芯片，单核性能领先
