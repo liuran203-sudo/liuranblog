@@ -112,3 +112,9 @@ deploy:
   type: git
   repository: git@github.com:liuran203-sudo/liuranblogs.github.io.git
   branch: main
+
+sitemap:
+  path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
