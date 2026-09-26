@@ -1,5 +1,5 @@
 title: 手机处理器
-description: 移动端 SoC，手机芯片参数、制程、跑分、发布时间
+description: 移动端 SoC，手机芯片参数、制程、跑分、发布时间，苹果A系列跑分为GeekBench，天玑/晓龙/玄戒为安兔兔,资料来自网络。如有遗漏请联系我
 
 brands:
   - name: 高通骁龙
@@ -7,9 +7,9 @@ brands:
     chips:
       - name: 骁龙 8Elite Extreme Gen6
         process: 2nm
-        cores: "待补充"
-        freq: "待补充"
-        gpu: "待补充"
+        cores: 2+3+3 核
+        freq: 5.0+4.0+3.74Ghz
+        gpu: Adreno 850
         release: 2026-09
         score: "待补充"
         desc: " "
@@ -633,43 +633,647 @@ brands:
   - name: 联发科天玑
     icon: fa-solid fa-microchip
     chips:
+      - name: 天玑 9600 Pro
+        process: 2nm
+        cores: 2+3+3 核
+        freq: 4.55+4.35+3.1Ghz
+        gpu: Mali-G2 Ultra NX
+        release: 2026-09
+        score: "待补充"
+      - name: 天玑 9600
+        process: 2nm
+        cores: "待补充"
+        freq: "待补充"
+        gpu: "待补充"
+        release: 2026-09
+        score: "待补充"
+      - name: 天玑 9500 Monster
+        process: 3nm
+        cores: 1+3+4 核
+        freq: 4.21+3.5+2.7GHz
+        gpu: Mali-G1 Ultra
+        release: 2026-05
+        score: 3859748
+      - name: 天玑 9500
+        process: 3nm
+        cores: 1+3+4 核
+        freq: 4.21+3.5+2.7GHz
+        gpu: Mali-G1 Ultra
+        release: 2025-09
+        score: 3803273
+      - name: 天玑 9500s
+        process: 3nm
+        cores: 1+3+4 核
+        freq: 3.73+3.3+2.4GHz
+        gpu: Immortalis-G925
+        release: 2026-01
+        score: 3612095
+      - name: 天玑 9400+
+        process: 3nm
+        cores: 1+3+4 核
+        freq: 3.73+3.3+2.4GHz
+        gpu: Immortalis-G925
+        release: 2024-10
+        score: 2735909
+      - name: 天玑 9400
+        process: 3nm
+        cores: 1+3+4 核
+        freq: 3.626+3.3+2.4GHz
+        gpu: Immortalis-G925
+        release: 2024-10
+        score: 2659169
+      - name: 天玑 9400e
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.4+2.85+2.0GHz
+        gpu: Mali-G720
+        release: "2025-Q2"
+        score: 2148772
+      - name: 天玑 9300+
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.4+2.85+2.0GHz
+        gpu: Mali-G720
+        release: "2024-Q2"
+        score: 2124162
+        desc: "斗龙士！"
       - name: 天玑 9300
-        process: 台积电 4nm
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.25+2.85+2.0GHz
+        gpu: Mali-G720
+        release: "2023-Q4"
+        score: 2014182
+      - name: 迅鲲 1380
+        process: 6nm
         cores: 8 核
-        freq: 3.25GHz
-        gpu: Immortalis-G720
-        release: 2023-11
-        score: 2100000
-        desc: 全大核架构，性能对标骁龙 8 Gen 3
+        freq: 3.0GHz
+        gpu: Mali-G57
+        release: "2022-Q1"
+        score: 1482965
+      - name: 天玑 8450
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.25+3.0+2.1GHz
+        gpu: Mali-G720
+        release: "2025-Q2"
+        score: 1233216
+      - name: 天玑 9200+
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.35+3.0+2.0GHz
+        gpu: Mali-G715
+        release: "2023-Q2"
+        score: 1022511
       - name: 天玑 9200
-        process: 台积电 4nm
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.05+2.85+1.8GHz
+        gpu: Mali-G715
+        release: "2022-Q4"
+        score: 1003162
+      - name: 天玑 8350 Ultimate
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.35+3.2+3.2GHz
+        gpu: Mali-G615
+        release: "2024-Q4"
+        score: 907369
+      - name: 天玑 9000+
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.20+2.85+1.8GHz
+        gpu: Mali-G710
+        release: "2022-Q3"
+        score: 814697
+      - name: 天玑 9000
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.05+2.85+1.8GHz
+        gpu: Mali-G710
+        release: "2021-Q4"
+        score: 786290
+      - name: 天玑 8300-Ultra
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.35+3.2+2.2GHz
+        gpu: Mali-G615
+        release: "2023-Q4"
+        score: 796852
+      - name: 天玑 8250
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.1+3.0+2.0GHz
+        gpu: Mali-G610
+        release: "2024-Q2"
+        score: 681908
+        desc: " "
+      - name: 天玑 8200
+        process: 4nm
+        cores: 1+3+4 核
+        freq: 3.1+3.0+2.0GHz
+        gpu: Mali-G610
+        release: "2023-Q1"
+        score: 661580
+        desc: " "
+      - name: 天玑 8100-Max
+        process: 5nm
+        cores: 4+4 核
+        freq: 2.85+2.0GHz
+        gpu: Mali-G610
+        release: "2022-Q1"
+        score: 606490
+        desc: " "
+      - name: 天玑 8100
+        process: 5nm
+        cores: 4+4 核
+        freq: 2.85+2.0GHz
+        gpu: Mali-G610
+        release: "2022-Q1"
+        score: 599131
+        desc: " "
+      - name: 天玑 8000
+        process: 5nm
+        cores: 4+4 核
+        freq: 2.75+2.0GHz
+        gpu: Mali-G610
+        release: "2022-Q1"
+        score: 527011
+        desc: " "
+      - name: 天玑 1300
+        process: 6nm
+        cores: 1+3+4 核
+        freq: 3.0+2.6+2.0GHz
+        gpu: Mali-G77
+        release: "2022-03"
+        score: 505476
+        desc: " "
+      - name: 天玑 1100
+        process: 6nm
+        cores: 4+4 核
+        freq: 2.6+2.0GHz
+        gpu: Mali-G77
+        release: "2021-Q3"
+        score: 471293
+        desc: " "
+      - name: 天玑 8020
+        process: 6nm
+        cores: 4+4 核
+        freq: 2.6+2.0GHz
+        gpu: Mali-G77
+        release: "2023-Q2"
+        score: 426891
+        desc: " "
+      - name: 天玑 7300X
+        process: 4nm
+        cores: 4+4 核
+        freq: 2.5+2.0GHz
+        gpu: Mali-G615
+        release: 2024
+        score: 387539
+        desc: " "
+      - name: 天玑 1050
+        process: 6nm
+        cores: 2+6 核
+        freq: 2.5+2.0GHz
+        gpu: Mali-G610
+        release: 2022
+        score: 358760
+        desc: " "
+      - name: 天玑 900
+        process: 6nm
+        cores: 2+6 核
+        freq: 2.4+2.0GHz
+        gpu: Mali G68
+        release: 2021-05
+        score: 328482
+        desc: " "
+      - name: 天玑 7025-Ultra
+        process: 6nm
+        cores: 2+6 核
+        freq: 2.5+2.0GHz
+        gpu:  PowerVR BXM-8-256
+        release: 2024
+        score: 314527
+        desc: " "
+      - name: 天玑 810
+        process: 6nm
+        cores: 2+6 核
+        freq: 2.4+2.0GHz
+        gpu: Mali-G57
+        release: 2021
+        score: 261680
+        desc: " "
+      - name: 天玑 700
+        process: 7nm
+        cores: 2+6 核
+        freq: 2.2+2.0GHz
+        gpu: Mali-G57
+        release: 2020-11
+        score: 249313
+        desc: " "
+      - name: 联发科 Helio G90T
+        process: 12nm
+        cores: 2+6 核
+        freq: 2.05+2.0GHz
+        gpu: PowerVR GM 9446
+        release: "2018-Q3"
+        score: 243158
+        desc: " "
+      - name: 天玑 6020
+        process: 7nm
+        cores: 2+6 核
+        freq: 2.2+2.0GHz
+        gpu: Mali-G57
+        release: "2023-Q1"
+        score: 241199
+        desc: " "
+      - name: 天玑 720
+        process: 7nm
+        cores: 2+6 核
+        freq: 2.0+2.0GHz
+        gpu: Mali-G57
+        release: "2023-07"
+        score: 230095
+        desc: " "
+      - name: 天玑 7020
+        process: 6nm
+        cores: 2+6 核
+        freq: 2.2+2.0GHz
+        gpu: BXM-8-256
+        release: "2023-Q3"
+        score: 229931
+        desc: " "
+      - name: 联发科 Helio P90
+        process: 12nm
+        cores: 2+6 核
+        freq: 2.2+2.0GHz
+        gpu: PowerVR GM 9446
+        release: "2017-Q3"
+        score: 184468
+        desc: " "
+      - name: 联发科 Helio G88
+        process: 12nm
+        cores: 2+6 核
+        freq: 2.0+1.8GHz
+        gpu: Mali-G52
+        release: "2020"
+        score: 168805
+        desc: " "
+      - name: 联发科 Helio P60
+        process: 12nm
+        cores: 4+4 核
+        freq: 2.0+2.0GHz
+        gpu: Mali-G72
+        release: "2017-Q3"
+        score: 165107
+        desc: " "
+      - name: 天玑 6360-Max
+        process: "未知"
+        cores: 2+6 核
+        freq: 2.4+2.0GHz
+        gpu: "未知"
+        release: 2026-04
+        score: 133562
+        desc: " "
+      - name: 联发科 Helio X30
+        process: 10nm
+        cores: 2+4+4 核
+        freq: 2.6+1.9+2.2GHz
+        gpu: PowerVR 7XTP-MT4
+        release: "2016-Q1"
+        score: 132180
+        desc: " "
+      - name: 联发科 Helio G35
+        process: 12nm
         cores: 8 核
-        freq: 3.05GHz
-        gpu: Immortalis-G715
-        release: 2022-11
-        score: 1500000
-        desc: 上代旗舰，性价比高
+        freq: 2.3GHz
+        gpu: PowerVR GE8320
+        release: "2017-Q1"
+        score: 104597
+        desc: " "
+      - name: 联发科 Helio P25
+        process: 16nm
+        cores: 4+4 核
+        freq: 2.6+1.6GHz
+        gpu: Mali-T880
+        release: "2016-Q2"
+        score: 103227
+        desc: " "
+      - name: 联发科 Helio P23
+        process: 16nm
+        cores: 8 核
+        freq: 2.5GHz
+        gpu: Mali-G71
+        release: "2016-Q2"
+        score: 97454
+        desc: " "
+      - name: 联发科 Helio P22
+        process: 12nm
+        cores: 8 核
+        freq: 2.0GHz
+        gpu: PowerVR GE8320
+        release: "2017-Q1"
+        score: 93591
+        desc: " "
+      - name: 联发科 Helio P20
+        process: 16nm
+        cores: 8 核
+        freq: 2.3GHz
+        gpu: Mali-T880
+        release: "2016-Q2"
+        score: 92612
+        desc: " "
+      - name: 联发科 Helio G25
+        process: 12nm
+        cores: 8 核
+        freq: 2.0GHz
+        gpu: PowerVR GE8320
+        release: "2017-Q1"
+        score: 89004
+        desc: " "
+      - name: 联发科 Helio G36
+        process: 12nm
+        cores: 8 核
+        freq: 2.2GHz
+        gpu: PowerVR GE8320
+        release: "2023-02"
+        score: 86218
+        desc: " "
+      - name: 联发科 Helio P10
+        process: 28nm
+        cores: 8 核
+        freq: 1.2GHz
+        gpu: Mali-T860 MP2
+        release: "2015-Q4"
+        score: 77195
+        desc: " "
+      - name: 联发科 Helio A22
+        process: 12nm
+        cores: 4 核
+        freq: 2.0GHz
+        gpu: PowerVR GE8320
+        release: "2018-06"
+        score: 67140
+        desc: " "
+      - name: 联发科 Helio A20
+        process: 12nm
+        cores: 4 核
+        freq: 1.8GHz
+        gpu: PowerVR GE8300
+        release: "2017"
+        score: 65547
+        desc: " "
+      - name: 联发科 Helio X25
+        process: 20nm
+        cores: 2+4+4 核
+        freq: 2.5+2.0+1.4GHz
+        gpu: Mali T880
+        release: "2018-10"
+        score: 59167
+        desc: " "
+      - name: 联发科 Helio X20
+        process: 20nm
+        cores: 2+4+4 核
+        freq: 2.5+2.0+1.4GHz
+        gpu: Mali T880
+        release: "2016-Q2"
+        score: 54852
+        desc: "首款十核Soc芯片！"
+      - name: 联发科 MT6750
+        process: 28nm
+        cores: 8 核
+        freq: 1.5GHz
+        gpu: Mali T860MP
+        release: 2016-01
+        score: 30814
+        desc: " "
 
   - name: 苹果 A 系列
     icon: fa-solid fa-microchip
     chips:
+      - name: A20 Pro
+        process: 2nm
+        cores: 2+4 核
+        freq: 4.93+2.64GHz
+        gpu: Apple自研六核心
+        release: 2029-09
+        score: "单核4732 多核12727"
+      - name: A20
+        process: 2nm
+        cores: 2+4 核
+        freq: 4.93+2.64GHz
+        gpu: Apple自研五核心
+        release: 2026-09
+        score: "待补充"
+      - name: A19 Pro
+        process: 3nm
+        cores: 2+4 核
+        freq: 4.22+2.58GHz
+        gpu: Apple自研六核心
+        release: 2025-09
+        score: "单核4019 多核11054"
+      - name: A19
+        process: 3nm
+        cores: 2+4 核
+        freq: 4.22+2.58GHz
+        gpu: Apple自研五核心
+        release: 2025-09
+        score: "单核3849 多核10307"
+      - name: A18 Pro
+        process: 3nm
+        cores: 2+4 核
+        freq: 4.05+2.42GHz
+        gpu: Apple自研六核心
+        release: 2024-09
+        score: "单核3118 多核8648"
+      - name: A18
+        process: 3nm
+        cores: 2+4 核
+        freq: 4.05+2.42GHz
+        gpu: Apple自研五核心
+        release: 2024-09
+        score: "单核3071 多核8452"
       - name: A17 Pro
-        process: 台积电 3nm
-        cores: 6 核
-        freq: 3.78GHz
-        gpu: 6 核 GPU
+        process: 3nm
+        cores: 2+4 核
+        freq: 3.78+2.11GHz
+        gpu: Apple自研六核心
         release: 2023-09
-        score: 2300000
-        desc: 首款 3nm 手机芯片，单核性能领先
+        score: "单核2725 多核7679"
+      - name: A16
+        process: 4nm
+        cores: 2+4 核
+        freq: 3.46+2.02GHz
+        gpu: Apple自研五核心
+        release: 2022-09
+        score: "单核2427 多核6962"
+      - name: A15
+        process: 5nm
+        cores: 2+4 核
+        freq: 3.23+2.02GHz
+        gpu: Apple自研五核心
+        release: 2021-09
+        score: "单核2228 多核6090"
+      - name: A14
+        process: 5nm
+        cores: 2+4 核
+        freq: 3.0+1.8GHz
+        gpu: Apple自研四核心
+        release: 2020-10
+        score: "单核2031 多核5210"
+      - name: A12Z
+        process: 7nm
+        cores: 4+4 核
+        freq: 2.49GHz
+        gpu: Apple自研八核心
+        release: 2020-03
+        score: "单核1418 多核5386"
+      - name: A13
+        process: 7nm
+        cores: 2+4 核
+        freq: 2.65+1.8GHz
+        gpu: Apple自研四核心
+        release: 2019-09
+        score: "单核1622 多核4216"
+      - name: A12X
+        process: 7nm
+        cores: 4+4 核
+        freq: 2.5GHz
+        gpu: Apple自研七核心
+        release: 2018-10
+        score: "单核1409 多核5382"
+      - name: A12
+        process: 7nm
+        cores: 2+4 核
+        freq: 2.5+1.6GHz
+        gpu: Apple自研四核心
+        release: 2018-09
+        score: "单核1351 多核3239"
+      - name: A11
+        process: 10nm
+        cores: 2+4 核
+        freq: 2.45+2.06GHz
+        gpu: Apple自研三核心
+        release: 2017-09
+      - name: A10X
+        process: 10nm
+        cores: 3+3 核
+        freq: 2.36+1.15GHz
+        gpu: PowerVR GT7600 Plus
+        release: 2017-06
+      - name: A10
+        process: 16nm
+        cores: 2+2 核
+        freq: 2.34+1.05GHz
+        gpu: PowerVR GT7600 Plus
+        release: 2016-09
+      - name: A9X
+        process: 16nm
+        cores: 双核 Twist
+        freq: 2.26GHz
+        gpu: PowerVR 7XT MP12
+        release: 2015-11
+      - name: A9
+        process: 16nm
+        cores: 双核 Twist
+        freq: 1.85GHz
+        gpu: PowerVR GT7600 450MHz
+        release: 2015-09
+      - name: A8X
+        process: 20nm
+        cores: 双核 Typhoon
+        freq: 1.5GHz
+        gpu: PowerVR G6850 450MHz
+        release: 2014-09
+      - name: A8
+        process: 20nm
+        cores: 双核 Typhoon
+        freq: 1.1-1.5GHz
+        gpu: PowerVR G6450 450MHz
+        release: 2014-09
+      - name: A7
+        process: 28nm
+        cores: 双核 Cyclone
+        freq: 1.3GHz
+        gpu: PowerVR G6430 450MHz
+        release: 2013-09
+      - name: A6X
+        process: 32nm
+        cores: 双核 Swift
+        freq: 1.4GHz
+        gpu: PowerVR SGX554 266MHz
+        release: 2012-10
+      - name: A6
+        process: 32nm
+        cores: 双核 Swift
+        freq: 1.3GHz
+        gpu: PowerVR SGX543 266MHz
+        release: 2012-09
+      - name: A5X
+        process: 45nm
+        cores: 双核 A9
+        freq: 1.0GHz
+        gpu: PowerVR SGX543 MP4 250MHz
+        release: 2012-03
+      - name: A5 工艺改良版
+        process: 32nm
+        cores: 双核 A9
+        freq: 800MHz-1.0GHz
+        gpu: PowerVR SGX54 200-250MHz
+        release: 2012-03
+      - name: A5
+        process: 45nm
+        cores: 双核 A9
+        freq: 800MHz-1.0GHz
+        gpu: PowerVR SGX54 200-250MHz
+        release: 2011-03
+      - name: A4
+        process: 45nm
+        cores: 单核 A8
+        freq: 800MHz-1.0GHz
+        gpu: PowerVR SGX538 200-250MHz
+        release: 2010-03
+      - name: APL2298
+        process: 45nm
+        cores: 单核 A8
+        freq: 600-800MHz
+        gpu: PowerVR SGX538 150-200MHz
+        release: 2009-09
+      - name: APL0298
+        process: 65nm
+        cores: 单核 A8
+        freq: 600MHz
+        gpu: PowerVR SGX538 150MHz
+        release: 2009-06
+      - name: APL0278
+        process: 65nm
+        cores: 单核
+        freq: 533MHz
+        gpu: PowerVR MBX Lite
+        release: 2008-09
+      - name: APL0098
+        process: 90nm
+        cores: 单核
+        freq: 412MHz
+        gpu: PowerVR MBX Lite
+        release: 2007-06
 
   - name: 小米
     icon: fa-solid fa-microchip
     chips:
+      - name: 玄戒 O3
+        process: 3nm
+        cores: 2+4+4 核
+        freq: 4.35+3.6+3.15GHz
+        gpu: Mail G2 Ultra
+        release: 2026-09
+        score: "待补充"
       - name: 玄戒 O1
-        process: 台积电 3nm
-        cores: 6 核
-        freq: 3.78GHz
-        gpu: 6 核 GPU
-        release: 2023-09
-        score: 2300000
-        desc: 首款 3nm 手机芯片，单核性能领先
+        process: 3nm
+        cores: 2+4+2+2 核
+        freq: 3.9+3.4+1.9+1.8GHz
+        gpu: ARM G925
+        release: 2025-05
+        score: 1582587
+        desc: 小米首款Soc芯片
