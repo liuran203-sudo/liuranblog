@@ -58,9 +58,9 @@
     maxim_top: 天行有常，
     maxim_bottom: 人心无住。
   buff:
-    buff_tips: 特长
-    buff_top: 脑回路新奇的 sz
-    buff_bottom: 猎奇指数 MAX
+    buff_tips: 现状
+    buff_top: 星屹工作室成员
+    buff_bottom: 参与StoneCraft-JE的维护与StoneAdventuer-JE的开发
   game:
     game_tips: 爱好游戏
     game_title: Minecraft

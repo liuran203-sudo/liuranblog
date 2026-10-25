@@ -1,6 +1,5 @@
 ---
 title: Minecraft Mod 开发：彩色盔甲 HUD 完整实现
-date: 2026-10-25 17:00:50
 tags:
   - Minecraft
   - 1.21.1
@@ -9,6 +8,8 @@ tags:
 categories:
   - Minecraft MOD 开发
 cover: 'https://img.liuranblog.top/file/1792919777687_post_4.png'
+abbrlink: 318fee4b
+date: 2026-10-25 17:00:50
 ---
 > 本文基于一份纯客户端 Minecraft（1.21.1，NeoForge 写法）模组源码，逐文件拆解「彩色盔甲状态栏 HUD」的完整实现。
 > 参考于[Colored Armor HUD](https://www.curseforge.com/minecraft/mc-mods/colored-armor-hud) 作者：Lunar201
